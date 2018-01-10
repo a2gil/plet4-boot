@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 $primary: #fada00;
-//$info: #cf0421;
 $info: #970200;
 $dark: #000;
+
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
@@ -17,4 +17,28 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.font-ht {
+    font-family: 'HelveticaThin';
+}
+
+.font-hi {
+    font-family: 'HelveticaItalic';
+}
+
+.font-hl {
+    font-family: 'HelveticaLight';
+}
+
+.font-ksl {
+    font-family: 'KelsonSansLight';
+}
+
+.font-ksr {
+    font-family: 'KelsonSansRegular';
+}
+
+.font-ksb {
+    font-family: 'KelsonSansBold';
 }
