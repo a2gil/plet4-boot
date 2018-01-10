@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Helvetica-3-Thin-Italic';
+  src: url('Helvetica-3-Thin-Italic.eot');
+  src: url('Helvetica-3-Thin-Italic.woff2') format('woff2'),
+       url('Helvetica-3-Thin-Italic.woff') format('woff'),
+       url('Helvetica-3-Thin-Italic.ttf') format('truetype'),
+       url('Helvetica-3-Thin-Italic.svg#Helvetica-3-Thin-Italic') format('svg'),
+       url('Helvetica-3-Thin-Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

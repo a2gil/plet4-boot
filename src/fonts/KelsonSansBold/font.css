@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'KelsonSans-BoldRU';
+  src: url('KelsonSans-BoldRU.woff') format('woff'),
+       url('KelsonSans-BoldRU.ttf') format('truetype'),
+       url('KelsonSans-BoldRU.svg#KelsonSans-BoldRU') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KelsonSansBold';
+  src: url('KelsonSansBold.eot');
+  src: url('KelsonSansBold.woff2') format('woff2'),
+       url('KelsonSansBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
