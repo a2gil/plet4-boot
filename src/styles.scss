@@ -4,13 +4,16 @@ $primary: #fada00;
 $info: #970200;
 $dark: #000;
 
-
-
-
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 html {
     font-size: 1rem;
+}
+
+@include media-breakpoint-up(xs) {
+    html {
+      font-size: 0.5rem;
+    }
 }
 
 @include media-breakpoint-up(sm) {
@@ -31,12 +34,41 @@ html {
     }
 }
 
-// body {
-//     padding-top: 54px;
-// }
+// for image responsive
+
+$container-height-base: 600px;
+$height-step: 100px;
+
+.x2fS {
+    height: $container-height-base;
+}
+
+@include media-breakpoint-up(xs) {
+    .x2fS {
+        height: $container-height-base - 3*$height-step;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .x2fS {
+        height: $container-height-base - 2*$height-step;
+    }
+}
+  
+@include media-breakpoint-up(md) {
+    .x2fS {
+        height: $container-height-base - 1*$height-step;
+    }
+}
+  
+@include media-breakpoint-up(lg) {
+    .x2fS {
+        height: $container-height-base;
+    }
+}
 
 .bg-image-full {
-    background: no-repeat center center scroll;
+    background: no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
