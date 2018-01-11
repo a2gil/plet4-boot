@@ -4,15 +4,52 @@ $primary: #fada00;
 $info: #970200;
 $dark: #000;
 
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+  );
+  
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 1392px,
+    xl: 1600px
+);
+
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// for image responsive
+
+$container-height-base: 600px;
+$height-step: 100px;
 
 html {
     font-size: 1rem;
 }
 
+.x2fS {
+    height: $container-height-base;
+}
+
+.pictogram {
+    width: 60px;
+}
+
+
 @include media-breakpoint-up(xs) {
     html {
       font-size: 0.5rem;
+    }
+
+    .x2fS {
+        height: $container-height-base - 3*$height-step;
+    }
+
+    .pictogram {
+        width: 70px;
     }
 }
 
@@ -20,52 +57,44 @@ html {
     html {
       font-size: 0.6rem;
     }
-}
-  
-@include media-breakpoint-up(md) {
-    html {
-      font-size: 0.9rem;
-    }
-}
-  
-@include media-breakpoint-up(lg) {
-    html {
-      font-size: 0.9rem;
-    }
-}
 
-// for image responsive
-
-$container-height-base: 600px;
-$height-step: 100px;
-
-.x2fS {
-    height: $container-height-base;
-}
-
-@include media-breakpoint-up(xs) {
-    .x2fS {
-        height: $container-height-base - 3*$height-step;
-    }
-}
-
-@include media-breakpoint-up(sm) {
     .x2fS {
         height: $container-height-base - 2*$height-step;
     }
+
+    .pictogram {
+        width: 90px;
+    }
 }
   
 @include media-breakpoint-up(md) {
+    html {
+      font-size: 0.9rem;
+    }
+
     .x2fS {
         height: $container-height-base - 1*$height-step;
+    }
+
+    .pictogram {
+        width: 100px;
     }
 }
   
 @include media-breakpoint-up(lg) {
+    html {
+      font-size: 0.9rem;
+    }
+
     .x2fS {
         height: $container-height-base;
     }
+
+    .pictogram {
+        width: 120px;
+    }
 }
+
 
 .bg-image-full {
     background: no-repeat scroll;
