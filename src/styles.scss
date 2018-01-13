@@ -38,6 +38,10 @@ html {
     width: 60px;
 }
 
+.s-pictogram {
+    width: 40px;
+}
+
 
 @include media-breakpoint-up(xs) {
     html {
@@ -51,6 +55,10 @@ html {
     .pictogram {
         width: 70px;
     }
+
+    .s-pictogram {
+        width: 50px;
+    } 
 }
 
 @include media-breakpoint-up(sm) {
@@ -65,6 +73,10 @@ html {
     .pictogram {
         width: 90px;
     }
+
+    .s-pictogram {
+        width: 60px;
+    } 
 }
   
 @include media-breakpoint-up(md) {
@@ -79,6 +91,10 @@ html {
     .pictogram {
         width: 100px;
     }
+
+    .s-pictogram {
+        width: 70px;
+    } 
 }
   
 @include media-breakpoint-up(lg) {
@@ -93,6 +109,10 @@ html {
     .pictogram {
         width: 120px;
     }
+
+    .s-pictogram {
+        width: 80px;
+    }   
 }
 
 
