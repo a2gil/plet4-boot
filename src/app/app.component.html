@@ -1,5 +1,5 @@
 <app-nav></app-nav>
-
+<app-modal [id]="'order'" [title]="'Оформление заказа'" [button]="'Оформить заказ'"></app-modal>
 <header class="py-5 bg-image-full" style="background-image: url('assets/x2fS.jpg');">
   <!-- <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt=""> -->
   <div class="container">
@@ -17,8 +17,14 @@
         </h3>
         <h6>
           <p class="text-secondary text-uppercase">оставьте заявку и наши специалисты
-            <br> проконсультируют вас бесплатно!</p>
+            <br> проконсультируют вас бесплатно!
+          </p>
         </h6>
+        <p>
+          <button class="btn btn-primary br-2 py-3 px-5" data-toggle="modal" data-target="#order">
+            <span class="font-ksr" style="font-size:1.5rem">Подобрать кресло</span>
+          </button>
+        </p>
       </div>
     </div>
   </div>
@@ -208,13 +214,13 @@
       </div>
     </div>
     <div class="row py-5">
-        <div class="col">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mx8BCFnF4P0?rel=0&amp;showinfo=0" frameborder="0"
-              allow="encrypted-media" allowfullscreen></iframe>
-          </div>
+      <div class="col">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mx8BCFnF4P0?rel=0&amp;showinfo=0" frameborder="0"
+            allow="encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
+    </div>
   </div>
 </section>
 
@@ -353,12 +359,158 @@
   <div class="container "></div>
 </section>
 
-<section class="py-5 bg-gray">
-  <div class="container"></div>
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h2>
+          <p class="text-uppercase font-ksb">отзывы наших клиентов</p>
+        </h2>
+      </div>
+    </div>
+    <!--feedback 1 -->
+    <div class="row pb-4">
+      <div class="col"></div>
+      <div class="col-8 bg-white">
+        <div class="row">
+          <div class="col">
+            <img class="img-fluid py-3" src="assets/section9/feedback1.png" alt="">
+          </div>
+          <div class="col-3">
+            <p class="py-4">
+              <span class="text-uppercase font-ksr">любовь сезанова</span>
+              <br>
+              <small class="text-muted">Архангельск</small>
+            </p>
+          </div>
+          <div class="col-7">
+            <p class="pt-4 text-uppercase font-ksr">
+              <b>ребята, огромное вам спасибо за ваш труд!</b>
+            </p>
+            <p>Проверку мужем (115кг) кресло прошло играючи, даже не думало скрипеть или, тем более, гнуться. Подушка большая
+              и мягкая, каркас крепкий и удобный, намотка прочная, цена более чем демократичная - а что еще нужно?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+
+    <!--feedback 2 -->
+    <div class="row pb-4">
+      <div class="col"></div>
+      <div class="col-8 bg-white">
+        <div class="row">
+          <div class="col">
+            <img class="img-fluid py-3" src="assets/section9/feedback2.png" alt="">
+          </div>
+          <div class="col-3">
+            <p class="py-4">
+              <span class="text-uppercase font-ksr">лёлька нечаева</span>
+              <br>
+              <small class="text-muted">Северодвинск</small>
+            </p>
+          </div>
+          <div class="col-7">
+            <p class="pt-4 text-uppercase font-ksr">
+              <b>наше кресло к нам приехало!</b>
+            </p>
+            <p>Спасибо большо! Очень красивое, функционал в ближайшее время оценим. По доставке порадовали</p>
+          </div>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+
+    <!--feedback 3 -->
+    <div class="row pb-4">
+      <div class="col"></div>
+      <div class="col-8 bg-white">
+        <div class="row">
+          <div class="col">
+            <img class="img-fluid py-3" src="assets/section9/feedback3.png" alt="">
+          </div>
+          <div class="col-3">
+            <p class="py-4">
+              <span class="text-uppercase font-ksr">наталья крапивина</span>
+              <br>
+              <small class="text-muted">Архангельск</small>
+            </p>
+          </div>
+          <div class="col-7">
+            <p class="pt-4 text-uppercase font-ksr">
+              <b>вчера доставили наши кресла, одно подвесное и одно на каркасе</b>
+            </p>
+            <p>Приобретением наша семья очень довольна, а самое главное, что эти кресла оценили наши дочки-двойняшки Алёна и
+              Олеся, ну и конечно руки мамы нмного освободились. Когда стал вопрос, о том, какое именно кресло выбрать, наши
+              мнения с мужем разошлись и пришлось взять два разных...ну и в дальнейшем наши девочки не будут спорить, кто
+              именно будет первый качаться. Спасибо Вам за то, что Вы есть.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
 </section>
-<h1>собственное производство</h1>
-<h2>собственное производство</h2>
-<h3>собственное производство</h3>
-<h4>собственное производство</h4>
-<h5>собственное производство</h5>
-<h6>собственное производство</h6>
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h2>
+          <p class="text-uppercase font-ksb">оставить свой отзыв или почитать другие
+            <br>вы можете в нашей группе вконтакте
+          </p>
+        </h2>
+      </div>
+    </div>
+    <div col="row py-4">
+      <div class="col">
+        <div class="d-flex justify-content-center">
+          <app-i-text [img]="'assets/section9/vk.png'">
+            <a href="http://vk.com">
+              <span class="font-hl text-secondary" style="font-size:1.2rem">Перейти в группу</span>
+            </a>
+
+          </app-i-text>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-4 justify-content-end">
+        <img src="assets/logo.png" alt="">
+      </div>
+      <div class="col-4">
+        <p class="text-uppercase text-white font-ksb">плетеные и подвесные кресла
+          <br> от производителя</p>
+        <p>
+          <app-i-text [img]="'assets/footer/map.png'">
+            <span class="text-uppercase text-white font-ksr">окружное шоссе 13Б
+              <br> (напротив тц на окружной)</span>
+          </app-i-text>
+        </p>
+        <p>
+          <app-i-text [img]="'assets/common/phone_36.png'">
+            <h5 class="mb-0">
+              <span class="text-uppercase text-white font-ksb">
+                <b>8 800 700-29-20</b>
+              </span>
+            </h5>
+          </app-i-text>
+        </p>
+        <p class="d-flex">
+          <app-i-text [img]="'assets/footer/ic-vk.png'">
+            <span class="text-secondary">В контакте</span>
+          </app-i-text>
+          <app-i-text [img]="'assets/footer/ic-ins.png'">
+            <span class="text-secondary">Instagram</span>
+          </app-i-text>
+        </p>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+</footer>

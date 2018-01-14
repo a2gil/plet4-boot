@@ -21,6 +21,12 @@ $container-max-widths: (
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+.navbar-nav {
+    .nav-item:hover {
+       border-bottom: 5px solid $primary;
+    }
+}
+
 // for image responsive
 
 $container-height-base: 600px;
@@ -125,15 +131,15 @@ html {
 }
 
 .font-ht {
-    font-family: 'HelveticaThin';
+    font-family: 'Helvetica-3-Thin';
 }
 
 .font-hi {
-    font-family: 'HelveticaItalic';
+    font-family: 'Helvetica-3-Italic';
 }
 
 .font-hl {
-    font-family: 'HelveticaLight';
+    font-family: 'Helvetica-4-Light';
 }
 
 .font-ksl {
