@@ -7,8 +7,8 @@ import { NavComponent } from './nav/nav.component';
 import { LoungeComponent } from './lounge/lounge.component';
 import { ITextComponent } from './i-text/i-text.component';
 import { ModalComponent } from './modal/modal.component';
-import { ChooseFormComponent } from './choose-form/choose-form.component';
 import { SupplyFormComponent } from './supply-form/supply-form.component';
+import { OrderFormComponent } from './order-form/order-form.component';
 
 
 @NgModule({
@@ -18,8 +18,8 @@ import { SupplyFormComponent } from './supply-form/supply-form.component';
     LoungeComponent,
     ITextComponent,
     ModalComponent,
-    ChooseFormComponent,
-    SupplyFormComponent
+    SupplyFormComponent,
+    OrderFormComponent
   ],
   imports: [
     BrowserModule,
