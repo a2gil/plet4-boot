@@ -1,25 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
-$primary: #fada00;
-$info: #970200;
-$dark: #000;
-
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px
-  );
-  
-$container-max-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 1392px,
-    xl: 1600px
-);
-
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'theme/custom.scss';
 
 .navbar-nav {
     .nav-item:hover {

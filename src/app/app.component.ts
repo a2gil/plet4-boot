@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import * as $ from 'jquery';
 
 @Component({
@@ -9,7 +10,9 @@ import * as $ from 'jquery';
 export class AppComponent implements OnInit {
   
   title = 'app';
-
+  orderForm = new FormGroup ({
+    name: new FormControl()
+  });
   ngOnInit(): void {
     console.log('inited');
     $('.nav-item').click( function() { console.log('clicked')});
