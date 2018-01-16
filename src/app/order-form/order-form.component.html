@@ -1,10 +1,105 @@
-<div class="row">
+<div class="row" [formGroup]="orderForm">
   <div class="col-5">
-    <p>Выберите форму кресла</p>
-    <div class="form-check form-check-inline abc-checkbox">
-        <input class="form-check-input" id="option1" type="checkbox">
-        <label class="form-check-label" for="option1">Шар</label>
+    <div class="row pb-4">
+      <div class="col">
+          <h5 class="text-uppercase">Выберите форму кресла</h5>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" id="option1" type="checkbox">
+              <label class="form-check-label" for="option1">Овал</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" id="option1" type="checkbox">
+              <label class="form-check-label" for="option1">Шар</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="option1" type="checkbox">
+            <label class="form-check-label" for="option1">Капля</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="option1" type="checkbox">
+            <label class="form-check-label" for="option1">Без стойки</label>
+          </div>
+      </div>
+    </div>
+    <div class="row pb-4">
+      <div class="col" formGroupName="kokon">
+          <h5 class="text-uppercase">Цвет кокона</h5>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input position-static" id="kokon1" type="checkbox" formControlName="black" aria-label="">
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input position-static" id="kokon2" type="checkbox" formControlName="black" aria-label="">
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input position-static" id="kokon3" type="checkbox" formControlName="black" aria-label="">
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" id="kokon4" type="checkbox" formControlName="other">
+              <label class="form-check-label" for="kokon4">Выбрать другой цвет</label>
+          </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col" formGroupName="podushka">
+            <h5 class="text-uppercase">Цвет подушки</h5>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input position-static" id="podushk1" type="checkbox" formControlName="blue" aria-label="">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input position-static" id="podushk2" type="checkbox" formControlName="brown" aria-label="">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input position-static" id="podushk3" type="checkbox" formControlName="red" aria-label="">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input position-static" id="podushk4" type="checkbox" formControlName="bezhev" aria-label="">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" id="podushk5" type="checkbox" formControlName="other">
+                <label class="form-check-label" for="podushk5">Выбрать другой цвет</label>
+            </div>
+        </div>
+      </div>
+  </div>
+  <div class="col-7">
+    <div formGroupName="customer">
+        <div class="form-group row">
+            <label for="fio" class="col-2 col-form-label">ФИО</label>
+            <div class="col-10">
+              <input type="text" class="form-control" id="fio" formControlName="fio" placeholder="Иванов Иван Иванович">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="email" class="col-2 col-form-label">Email</label>
+            <div class="col-10">
+              <input type="email" class="form-control" id="email" formControlName="email" placeholder="example@site.com">
+            </div>
+          </div>
+          <div class="form-group row">
+              <label for="city" class="col-2 col-form-label">Город</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="city" formControlName="city" placeholder="Санкт-Петербург">
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="address" class="col-2 col-form-label">Адрес</label>
+                <div class="col-10">
+                  <input type="text" class="form-control" id="address" formControlName="address" placeholder="Невский проспект, 1-100">
+                </div>
+              </div>
+              <div class="form-group row">
+                  <label for="phone" class="col-2 col-form-label">Телефон</label>
+                  <div class="col-10">
+                    <input type="text" class="form-control" id="phone" formControlName="phone" placeholder="+7 (999) 000-00-00">
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <label for="comment" class="col-2 col-form-label">Комментарий</label>
+                    <div class="col-10">
+                      <input type="text" class="form-control" id="comment" formControlName="comment" placeholder="">
+                    </div>
+                  </div>
     </div>
   </div>
-  <div class="col-5"></div>
 </div>
