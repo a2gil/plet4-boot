@@ -17,12 +17,6 @@ export class AppComponent implements OnInit {
       kaplya: [false],
       bstoyki: [false],
     }),
-    kokon: this.fb.group({
-      black: [false],
-      white: [false],
-      brown: [false],
-      other: [false]
-    }),
     podushka: this.fb.group({
       blue: [false],
       brown: [false],
@@ -36,9 +30,9 @@ export class AppComponent implements OnInit {
       city: ['',[Validators.required ]],
       address: ['', [ Validators.required ]],
       phone: ['', [Validators.required]],
-      component:['']
+      comment:['']
     }),
-    sms: [true]
+    method: ['', [ Validators.required]]
   });
 
   constructor(private fb: FormBuilder) {

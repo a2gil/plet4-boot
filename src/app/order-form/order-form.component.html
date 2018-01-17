@@ -1,42 +1,26 @@
 <div class="row" [formGroup]="orderForm">
   <div class="col-5">
     <div class="row pb-4">
-      <div class="col">
+      <div class="col" formGroupName="forma">
         <h5 class="text-uppercase">Выберите форму кресла</h5>
+        
         <div class="form-check form-check-inline">
-          <input class="form-check-input" id="option1" type="checkbox">
-          <label class="form-check-label" for="option1">Овал</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" id="option1" type="checkbox">
-          <label class="form-check-label" for="option1">Шар</label>
+          <input class="form-check-input" id="oval" formControlName="oval" type="checkbox">
+          <label class="form-check-label" for="oval">Овал</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" id="option1" type="checkbox">
-          <label class="form-check-label" for="option1">Капля</label>
+          <input class="form-check-input" id="shar" formControlName="shar" type="checkbox">
+          <label class="form-check-label" for="shar">Шар</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" id="option1" type="checkbox">
-          <label class="form-check-label" for="option1">Без стойки</label>
-        </div>
-      </div>
-    </div>
-    <div class="row pb-4">
-      <div class="col" formGroupName="kokon">
-        <h5 class="text-uppercase">Цвет кокона</h5>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input position-static" id="kokon1" type="checkbox" formControlName="black" aria-label="">
+          <input class="form-check-input" id="kaplya" formControlName="kaplya" type="checkbox">
+          <label class="form-check-label" for="kaplya">Капля</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input position-static" id="kokon2" type="checkbox" formControlName="black" aria-label="">
+          <input class="form-check-input" id="bstoyki" formControlName="bstoyki" type="checkbox">
+          <label class="form-check-label" for="bskoyki">Без стойки</label>
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input position-static" id="kokon3" type="checkbox" formControlName="black" aria-label="">
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" id="kokon4" type="checkbox" formControlName="other">
-          <label class="form-check-label" for="kokon4">Выбрать другой цвет</label>
-        </div>
+
       </div>
     </div>
 
@@ -44,20 +28,20 @@
       <div class="col" formGroupName="podushka">
         <h5 class="text-uppercase">Цвет подушки</h5>
         <div class="form-check form-check-inline">
-          <input class="form-check-input position-static" id="podushk1" type="checkbox" formControlName="blue" aria-label="">
+          <input class="form-check-input position-static" id="blue" type="checkbox" formControlName="blue" aria-label="">
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input position-static" id="podushk2" type="checkbox" formControlName="brown" aria-label="">
+          <input class="form-check-input position-static" id="brown" type="checkbox" formControlName="brown" aria-label="">
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input position-static" id="podushk3" type="checkbox" formControlName="red" aria-label="">
+          <input class="form-check-input position-static" id="red" type="checkbox" formControlName="red" aria-label="">
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input position-static" id="podushk4" type="checkbox" formControlName="bezhev" aria-label="">
+          <input class="form-check-input position-static" id="bezhev" type="checkbox" formControlName="bezhev" aria-label="">
         </div>
         <div class="form-check">
-          <input class="form-check-input" id="podushk5" type="checkbox" formControlName="other">
-          <label class="form-check-label" for="podushk5">Выбрать другой цвет</label>
+          <input class="form-check-input" id="other" type="checkbox" formControlName="other">
+          <label class="form-check-label" for="other">Выбрать другой цвет</label>
         </div>
       </div>
     </div>
@@ -67,7 +51,11 @@
       <div class="form-group row">
         <label for="fio" class="col-2 col-form-label">ФИО</label>
         <div class="col-10">
-          <input type="text" class="form-control" id="fio" formControlName="fio" placeholder="Иванов Иван Иванович">
+          <input type="text" 
+                class="form-control"
+                id="fio" 
+                formControlName="fio" 
+                placeholder="Иванов Иван Иванович">
         </div>
       </div>
       <div class="form-group row">
@@ -100,6 +88,27 @@
           <input type="text" class="form-control" id="comment" formControlName="comment" placeholder="">
         </div>
       </div>
+      
     </div>
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Способ подтверждения</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="method" id="sms" value="sms" formControlName="method" checked>
+            <label class="form-check-label" for="sms">
+              СМС Уведомление
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="method" id="call" value="call" formControlName="method">
+            <label class="form-check-label" for="call">
+              Звонок оператора
+            </label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
   </div>
 </div>
+<pre>{{orderForm.value | json}}</pre>
