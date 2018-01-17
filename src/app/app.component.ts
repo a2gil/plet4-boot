@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
       phone: ['', [Validators.required]],
       comment:['']
     }),
-    method: ['', [ Validators.required]]
+    method: ['sms', [ Validators.required]]
   });
 
   constructor(private fb: FormBuilder) {
@@ -41,5 +41,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     $('.nav-item').click( function() { console.log('clicked')});
+  }
+
+  submitOrder() {
+    console.log(JSON.stringify(this.orderForm.value));
   }
 }
