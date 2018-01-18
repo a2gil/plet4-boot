@@ -9,7 +9,7 @@ import { ITextComponent } from './i-text/i-text.component';
 import { ModalComponent } from './modal/modal.component';
 import { SupplyFormComponent } from './supply-form/supply-form.component';
 import { OrderFormComponent } from './order-form/order-form.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { OrderFormComponent } from './order-form/order-form.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

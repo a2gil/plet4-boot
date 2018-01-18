@@ -25,6 +25,8 @@ export class ModalComponent implements OnInit {
   submit() {
     if (this.formGroup.valid) {
        this.onSubmit.emit();
+       this.formGroup.reset();
+       this.validated = false;
     }
     else {
       this.validated = true;

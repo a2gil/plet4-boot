@@ -44,6 +44,7 @@ export class AppComponent implements OnInit {
   }
 
   submitOrder() {
-    console.log(JSON.stringify(this.orderForm.value));
+    console.log(JSON.stringify(this.orderForm.value)); 
+    $('#order').modal('hide');   
   }
 }
