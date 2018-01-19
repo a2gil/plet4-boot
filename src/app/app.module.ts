@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
+import { AppComponent, NgbdModalOrderComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { LoungeComponent } from './lounge/lounge.component';
 import { ITextComponent } from './i-text/i-text.component';
@@ -19,7 +19,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ITextComponent,
     ModalComponent,
     SupplyFormComponent,
-    OrderFormComponent
+    OrderFormComponent,
+    NgbdModalOrderComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +28,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [NgbdModalOrderComponent]
 })
 export class AppModule { }

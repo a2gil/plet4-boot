@@ -1,14 +1,5 @@
 <app-nav></app-nav>
-<app-modal 
-  [id]="'order'" 
-  [formGroup]="orderForm" 
-  [title]="'Оформление заказа'" 
-  [button]="'Оформить заказ'"
-  (onSubmit)="submitOrder()">
-  <app-order-form [orderForm]="orderForm"></app-order-form>
-</app-modal>
 <header class="py-5 bg-image-full" style="background-image: url('assets/x2fS.jpg');">
-  <!-- <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt=""> -->
   <div class="container">
     <div class="row x2fS">
       <div class="col-sm-6 offset-sm-6 align-self-center">
@@ -28,7 +19,7 @@
           </p>
         </h6>
         <p>
-          <button class="btn btn-primary br-2 py-3 px-5" data-toggle="modal" data-target="#order">
+          <button class="btn btn-primary br-2 py-3 px-5" (click)="openOrderForm()">
             <span class="font-ksr" style="font-size:1.5rem">Подобрать кресло</span>
           </button>
         </p>
@@ -120,24 +111,44 @@
     </div>
     <div class="row py-5">
       <div class="col">
-        <app-lounge [imgSrc]="'assets/section2/kaplya.jpg'" [title]="'Подвесное кресло со стойкой'" [type]="'КАПЛЯ'" [corpus]="'МЕТАЛЛ'"
-          [price]=16990>
+        <app-lounge 
+          [imgSrc]="'assets/section2/kaplya.jpg'"
+          [title]="'Подвесное кресло со стойкой'" 
+          [type]="'капля'" 
+          [corpus]="'металл'"
+          [price]=16990
+          (onOrder)="openOrderForm('kaplya')">
         </app-lounge>
       </div>
       <div class="col">
-        <app-lounge [imgSrc]="'assets/section2/kaplya.jpg'" [title]="'Подвесное кресло со стойкой'" [type]="'КАПЛЯ'" [corpus]="'МЕТАЛЛ'"
-          [price]=16990>
+        <app-lounge 
+          [imgSrc]="'assets/section2/kaplya.jpg'" 
+          [title]="'Подвесное кресло со стойкой'" 
+          [type]="'овал'" 
+          [corpus]="'металл'"
+          [price]=16990
+          (onOrder)="openOrderForm('oval')">
         </app-lounge>
       </div>
       <div class="d-lg-none w-100"></div>
       <div class="col">
-        <app-lounge [imgSrc]="'assets/section2/kaplya.jpg'" [title]="'Подвесное кресло со стойкой'" [type]="'КАПЛЯ'" [corpus]="'МЕТАЛЛ'"
-          [price]=16990>
+        <app-lounge 
+          [imgSrc]="'assets/section2/kaplya.jpg'" 
+          [title]="'Подвесное кресло со стойкой'" 
+          [type]="'на выбор'" 
+          [corpus]="'металл'"
+          [price]=16990
+          (onOrder)="openOrderForm('bstoyki')">
         </app-lounge>
       </div>
       <div class="col">
-        <app-lounge [imgSrc]="'assets/section2/kaplya.jpg'" [title]="'Подвесное кресло со стойкой'" [type]="'КАПЛЯ'" [corpus]="'МЕТАЛЛ'"
-          [price]=16990>
+        <app-lounge 
+          [imgSrc]="'assets/section2/kaplya.jpg'" 
+          [title]="'Подвесное кресло со стойкой'" 
+          [type]="'шар'" 
+          [corpus]="'металл'"
+          [price]=16990
+          (onOrder)="openOrderForm('shar')">
         </app-lounge>
       </div>
     </div>

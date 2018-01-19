@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter  } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-modal',
@@ -13,10 +14,10 @@ export class ModalComponent implements OnInit {
   @Input() public button: string;
   @Input() public title: string;
   @Input() public formGroup: FormGroup;
-  @Output() public onSubmit = new EventEmitter();
+  
   validated: boolean;
 
-  constructor() { }
+  constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit() {
     this.validated = false;
@@ -24,7 +25,7 @@ export class ModalComponent implements OnInit {
 
   submit() {
     if (this.formGroup.valid) {
-       this.onSubmit.emit();
+       this.activeModal.close(this.formGroup.value);
        this.formGroup.reset();
        this.validated = false;
     }

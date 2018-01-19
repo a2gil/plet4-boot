@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-lounge',
@@ -12,10 +12,15 @@ export class LoungeComponent implements OnInit {
   @Input() public type: string = '';
   @Input() public corpus: string = '';
   @Input() public price: number = 0;
+  @Output() public onOrder = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  order(event) {
+    if (this.onOrder)
+      this.onOrder.emit(event);
+  }
 }
