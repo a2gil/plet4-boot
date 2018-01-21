@@ -11,6 +11,7 @@
 
 $container-height-base: 600px;
 $height-step: 100px;
+$font-ste: 1;
 
 html {
     font-size: 1rem;
@@ -34,6 +35,30 @@ html {
       font-size: 0.5rem;
     }
 
+    .fs-xs-0 {
+        font-size: 0.5rem;
+    }
+
+    .fs-xs-1 {
+        font-size: 1.2rem;
+    }
+
+    .fs-xs-2 {
+        font-size: 1.5rem;
+    }
+
+    .fs-xs-3 {
+        font-size: 1.7rem;
+    }
+
+    .fs-xs-4 {
+        font-size: 2rem;
+    }
+
+    .fs-xs-5 {
+        font-size: 2.5rem;
+    }
+
     .x2fS {
         height: $container-height-base - 3*$height-step;
     }
@@ -50,6 +75,30 @@ html {
 @include media-breakpoint-up(sm) {
     html {
       font-size: 0.6rem;
+    }
+
+    .fs-sm-0 {
+        font-size: 0.6rem;
+    }
+
+    .fs-sm-1 {
+        font-size: 1.2rem;
+    }
+
+    .fs-sm-2 {
+        font-size: 1.5rem;
+    }
+
+    .fs-sm-3 {
+        font-size: 1.7rem;
+    }
+
+    .fs-sm-4 {
+        font-size: 2rem;
+    }
+
+    .fs-sm-5 {
+        font-size: 2.5rem;
     }
 
     .x2fS {
@@ -70,6 +119,30 @@ html {
       font-size: 0.9rem;
     }
 
+    .fs-md-0 {
+        font-size: 0.9rem;
+    }
+
+    .fs-md-1 {
+        font-size: 1.2rem;
+    }
+
+    .fs-md-2 {
+        font-size: 1.5rem;
+    }
+
+    .fs-md-3 {
+        font-size: 1.7rem;
+    }
+
+    .fs-md-4 {
+        font-size: 2rem;
+    }
+
+    .fs-md-5 {
+        font-size: 2.5rem;
+    }
+    
     .x2fS {
         height: $container-height-base - 1*$height-step;
     }
@@ -88,6 +161,30 @@ html {
       font-size: 0.9rem;
     }
 
+    .fs-lg-0 {
+        font-size: 0.9rem;
+    }
+
+    .fs-lg-1 {
+        font-size: 1.2rem;
+    }
+
+    .fs-lg-2 {
+        font-size: 1.5rem;
+    }
+
+    .fs-lg-3 {
+        font-size: 1.7rem;
+    }
+
+    .fs-lg-4 {
+        font-size: 2rem;
+    }
+
+    .fs-lg-5 {
+        font-size: 2.5rem;
+    }
+
     .x2fS {
         height: $container-height-base;
     }
@@ -101,6 +198,126 @@ html {
     }   
 }
 
+@include media-breakpoint-down(xs) {
+    .ta-xs-center {
+        text-align: center
+    }
+
+    .w-xs-25 {
+        width: 25%;
+    }
+
+    .h-xs-25 {
+        height: 25%;
+    }
+
+    .w-xs-50 {
+        width: 75%;
+    }
+
+    .h-xs-75 {
+        height: 75%;
+    }
+
+    .w-xs-75 {
+        width: 75%;
+    }
+
+    .h-xs-75 {
+        height: 75%;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .ta-sm-center {
+        text-align: center
+    }
+
+    .w-sm-25 {
+        width: 25%;
+    }
+
+    .h-sm-25 {
+        height: 25%;
+    }
+
+    .w-sm-50 {
+        width: 75%;
+    }
+
+    .h-sm-75 {
+        height: 75%;
+    }
+
+    .w-sm-75 {
+        width: 75%;
+    }
+
+    .h-sm-75 {
+        height: 75%;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .ta-md-center {
+        text-align: center
+    }
+
+    .adv {
+        border-bottom: 1px solid #7d0200;
+        margin: 0rem 2rem;
+    }
+
+    .w-md-25 {
+        width: 25%;
+    }
+
+    .h-md-25 {
+        height: 25%;
+    }
+
+    .w-md-50 {
+        width: 75%;
+    }
+
+    .h-md-75 {
+        height: 75%;
+    }
+
+    .w-md-75 {
+        width: 75%;
+    }
+
+    .h-md-75 {
+        height: 75%;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .w-lg-25 {
+        width: 25%;
+    }
+
+    .h-lg-25 {
+        height: 25%;
+    }
+
+    .w-lg-50 {
+        width: 75%;
+    }
+
+    .h-lg-75 {
+        height: 75%;
+    }
+
+    .w-lg-75 {
+        width: 75%;
+    }
+
+    .h-lg-75 {
+        height: 75%;
+    }
+}
 
 .bg-image-full {
     background: no-repeat scroll;

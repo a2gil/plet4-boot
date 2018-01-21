@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import * as $ from 'jquery';
@@ -52,7 +53,10 @@ export class AppComponent implements OnInit {
     method: ['sms', [ Validators.required]]
   });
 
-  constructor(private fb: FormBuilder, private modalService: NgbModal) {
+  constructor(
+    private fb: FormBuilder, 
+    private http: HttpClient,
+    private modalService: NgbModal) {
     
   }
 
@@ -74,7 +78,10 @@ export class AppComponent implements OnInit {
     modalRef.componentInstance.orderForm = this.orderForm;
     modalRef.result
     .then((res) => { 
-      console.log(JSON.stringify(res));
+      this.http.post('http://pletenev.ru/new/mail.php', JSON.stringify(res))
+      .subscribe((r) => {
+        console.log('Sent..');
+      })
     },(reason) => {});
   }
 }

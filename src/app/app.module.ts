@@ -10,6 +10,7 @@ import { ModalComponent } from './modal/modal.component';
 import { SupplyFormComponent } from './supply-form/supply-form.component';
 import { OrderFormComponent } from './order-form/order-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    HttpClientModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent],
   entryComponents: [NgbdModalOrderComponent]
 })
