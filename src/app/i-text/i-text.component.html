@@ -1,6 +1,8 @@
 <div class="d-flex align-items-center">
-  <div>
-      <img src="{{img}}" alt="">
+  <div class="text-right">
+      <img 
+        [class.w-50]="width > 0"
+        src="{{img}}" alt="">
   </div>
   <div class="px-3 align-self-center">
     <ng-content></ng-content>

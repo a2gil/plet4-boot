@@ -8,7 +8,8 @@ import { Component, OnInit,Input } from '@angular/core';
 export class ITextComponent implements OnInit {
 
   @Input() public img: string = '';
-
+  @Input() public width: number;
+  
   constructor() { }
 
   ngOnInit() {
