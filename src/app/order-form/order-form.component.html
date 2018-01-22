@@ -8,15 +8,15 @@
           <input class="form-check-input" id="oval" formControlName="oval" type="checkbox">
           <label class="form-check-label" for="oval">Овал</label>
         </div>
-        <div class="form-check form-check-inline">
+        <div class="form-check form-check-inline abc-checkbox abc-checkbox-primary">
           <input class="form-check-input" id="shar" formControlName="shar" type="checkbox">
           <label class="form-check-label" for="shar">Шар</label>
         </div>
-        <div class="form-check form-check-inline">
+        <div class="form-check form-check-inline abc-checkbox abc-checkbox-primary">
           <input class="form-check-input" id="kaplya" formControlName="kaplya" type="checkbox">
           <label class="form-check-label" for="kaplya">Капля</label>
         </div>
-        <div class="form-check form-check-inline">
+        <div class="form-check form-check-inline abc-checkbox abc-checkbox-primary">
           <input class="form-check-input" id="bstoyki" formControlName="bstoyki" type="checkbox">
           <label class="form-check-label" for="bskoyki">Без стойки</label>
         </div>
@@ -25,7 +25,7 @@
     </div>
 
     <div class="row">
-      <div class="col" formGroupName="podushka">
+      <div class="col pb-5" formGroupName="podushka">
         <h5 class="text-uppercase">Цвет подушки</h5>
         <div class="form-check form-check-inline">
           <input class="form-check-input position-static" id="blue" type="checkbox" formControlName="blue" aria-label="">
@@ -58,7 +58,7 @@
                 formControlName="fio" 
                 placeholder="Иванов Иван Иванович" required>
                 <div class="invalid-feedback">
-                  Looks good!
+                  Введите ФИО
                 </div>
         </div>
         
@@ -67,52 +67,91 @@
         <label for="email" class="col-2 col-form-label">Email</label>
         <div class="col-10">
           <input type="email" class="form-control" id="email" formControlName="email" placeholder="example@site.com">
+          <div class="invalid-feedback">
+            Введите корректный e-mail
+          </div>
         </div>
       </div>
       <div class="form-group row">
         <label for="city" class="col-2 col-form-label">Город</label>
         <div class="col-10">
           <input type="text" class="form-control" id="city" formControlName="city" placeholder="Санкт-Петербург">
+          <div class="invalid-feedback">
+            Введите город проживания
+          </div>
         </div>
       </div>
       <div class="form-group row">
         <label for="address" class="col-2 col-form-label">Адрес</label>
         <div class="col-10">
           <input type="text" class="form-control" id="address" formControlName="address" placeholder="Невский проспект, 1-100">
+          <div class="invalid-feedback">
+            Введите адрес проживания
+          </div>
         </div>
       </div>
       <div class="form-group row">
         <label for="phone" class="col-2 col-form-label">Телефон</label>
         <div class="col-10">
-          <input type="text" class="form-control" id="phone" formControlName="phone" placeholder="+7 (999) 000-00-00">
+          <input type="text" class="form-control" id="phone" [textMask]="{mask: mask}" formControlName="phone" placeholder="+7 (999) 000-00-00">
+          <div class="invalid-feedback">
+            Введите телефон
+          </div>
         </div>
       </div>
-      <div class="form-group row">
-        <label for="comment" class="col-2 col-form-label">Комментарий</label>
-        <div class="col-10">
-          <input type="text" class="form-control" id="comment" formControlName="comment" placeholder="">
-        </div>
-      </div>
-      
     </div>
-    <fieldset class="form-group">
-      <div class="row">
-        <legend class="col-form-label col-sm-2 pt-0">Способ подтверждения</legend>
-        <div class="col-sm-10">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="method" id="sms" value="sms" formControlName="method" checked>
-            <label class="form-check-label" for="sms">
-              СМС Уведомление
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="method" id="call" value="call" formControlName="method">
-            <label class="form-check-label" for="call">
-              Звонок оператора
-            </label>
-          </div>
-        </div>
-      </div>
-    </fieldset>
   </div>
+  <div class="w-100"> </div>
+  <div class="col">
+      <div class="row">
+          <div class="col">
+              <div class="form-group" formGroupName="customer">
+                  <label for="comment">Комментарий к заказу:</label>
+                  <input class="form-control" id="comment" formControlName="comment">
+              </div>
+          </div>
+          <div class="w-100"></div>
+          <div class="col">
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                  <label for="method">Способ подтверждения</label>
+              </div>
+              <div class="col-xs-12 col-sm-8">
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="method" id="sms" value="sms" formControlName="method" checked>
+                      <label class="form-check-label" for="sms">
+                        СМС Уведомление
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="method" id="call" value="call" formControlName="method">
+                      <label class="form-check-label" for="call">
+                        Звонок оператора
+                      </label>
+                    </div>
+              </div>
+            </div>
+              <!-- <fieldset class="form-group"> 
+                  <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Способ подтверждения</legend>
+                    <div class="col-sm-10">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="method" id="sms" value="sms" formControlName="method" checked>
+                        <label class="form-check-label" for="sms">
+                          СМС Уведомление
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="method" id="call" value="call" formControlName="method">
+                        <label class="form-check-label" for="call">
+                          Звонок оператора
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset> -->
+          </div>
+      </div>
+  </div>
+  
 </div>

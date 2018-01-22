@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import * as $ from 'jquery';
-import { controlNameBinding } from '@angular/forms/src/directives/reactive_directives/form_control_name';
+//import { controlNameBinding } from '@angular/forms/src/directives/reactive_directives/form_control_name';
 
 @Component({
   selector: 'ngbd-modal-order',
@@ -45,23 +45,23 @@ export class AppComponent implements OnInit {
     customer: this.fb.group({
       fio: ['', [ Validators.required]],
       email: ['', [ Validators.required, Validators.email]],
-      city: ['',[Validators.required ]],
+      city: ['', [Validators.required ]],
       address: ['', [ Validators.required ]],
       phone: ['', [Validators.required]],
-      comment:['']
+      comment: ['']
     }),
     method: ['sms', [ Validators.required]]
   });
 
   constructor(
-    private fb: FormBuilder, 
+    private fb: FormBuilder,
     private http: HttpClient,
     private modalService: NgbModal) {
-    
+
   }
 
   ngOnInit(): void {
-    
+
   }
 
   openOrderForm(event) {
@@ -74,14 +74,14 @@ export class AppComponent implements OnInit {
       this.orderForm.get('forma').reset();
       this.orderForm.get('forma').get(data).setValue(true);
     }
-    
+
     modalRef.componentInstance.orderForm = this.orderForm;
     modalRef.result
-    .then((res) => { 
-      this.http.post('http://pletenev.ru/new/mail.php', JSON.stringify(res))
+    .then((res) => {
+      this.http.post('http://new.pletenev.ru/mail.php', JSON.stringify(res))
       .subscribe((r) => {
         console.log('Sent..');
-      })
+      });
     },(reason) => {});
   }
 }

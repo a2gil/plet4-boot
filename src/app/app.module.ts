@@ -11,6 +11,7 @@ import { SupplyFormComponent } from './supply-form/supply-form.component';
 import { OrderFormComponent } from './order-form/order-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TextMaskModule } from 'angular2-text-mask';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TextMaskModule,
     NgbModule.forRoot()
   ],
   providers: [HttpClientModule],

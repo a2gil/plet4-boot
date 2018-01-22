@@ -9,6 +9,7 @@ import { FormGroup } from '@angular/forms';
 export class OrderFormComponent implements OnInit {
 
   @Input() public orderForm: FormGroup;
+  public mask = ['+', '7', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/];
 
   constructor() { }
 
