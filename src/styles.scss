@@ -233,6 +233,11 @@ html {
         text-align: center
     }
 
+    .adv {
+        border-bottom: 1px solid #7d0200;
+        margin: 0rem 2rem;
+    }
+
     .w-sm-25 {
         width: 25%;
     }
@@ -263,11 +268,6 @@ html {
         text-align: center
     }
 
-    .adv {
-        border-bottom: 1px solid #7d0200;
-        margin: 0rem 2rem;
-    }
-
     .w-md-25 {
         width: 25%;
     }
@@ -293,7 +293,7 @@ html {
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .w-lg-25 {
         width: 25%;
     }
@@ -326,6 +326,14 @@ html {
     background-size: cover;
     -o-background-size: cover;
 }
+
+.no-paddings {
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 
 .font-ht {
     font-family: 'Helvetica-3-Thin';
