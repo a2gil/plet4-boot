@@ -22,13 +22,36 @@ html {
 }
 
 .pictogram {
-    width: 60px;
+    width: 50px;
 }
 
 .s-pictogram {
     width: 40px;
 }
 
+.fs-0 {
+    font-size: 0.5rem;
+}
+
+.fs-1 {
+    font-size: 1.2rem;
+}
+
+.fs-2 {
+    font-size: 1.5rem;
+}
+
+.fs-3 {
+    font-size: 1.8rem;
+}
+
+.fs-4 {
+    font-size: 2.1rem;
+}
+
+.fs-5 {
+    font-size: 2.7rem;
+}
 
 @include media-breakpoint-up(xs) {
     html {
@@ -64,7 +87,7 @@ html {
     }
 
     .pictogram {
-        width: 70px;
+        width: 50px;
     }
 
     .s-pictogram {
@@ -106,7 +129,7 @@ html {
     }
 
     .pictogram {
-        width: 90px;
+        width: 70px;
     }
 
     .s-pictogram {
@@ -148,7 +171,7 @@ html {
     }
 
     .pictogram {
-        width: 100px;
+        width: 80px;
     }
 
     .s-pictogram {
@@ -190,7 +213,7 @@ html {
     }
 
     .pictogram {
-        width: 120px;
+        width: 100px;
     }
 
     .s-pictogram {
