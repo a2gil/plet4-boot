@@ -1,8 +1,31 @@
 .available-color {
-    width: 52px;
-    height: 52px;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto;
 }
 
 .br-2 {
     border-radius: 2rem;
+}
+
+.color-block {
+    padding:  0 2rem;
+    color: white;
+
+    >p {
+        text-align: center;
+        font-family: 'Helvetica-4-Light';
+    }
+}
+
+.bg-black {
+    background: black;
+}
+
+.bg-antiqwhite {
+    background: #F0DEBA;
+}
+
+.bg-brown {
+    background: #96440C;
 }
