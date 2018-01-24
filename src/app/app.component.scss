@@ -29,3 +29,22 @@
 .bg-brown {
     background: #96440C;
 }
+
+.sub-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.ledge-row {
+    margin-top: -60px;
+    margin-bottom: -60px;
+}
+
+.ledge-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
