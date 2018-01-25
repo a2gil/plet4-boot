@@ -381,3 +381,18 @@ html {
 .font-ksb {
     font-family: 'KelsonSansBold';
 }
+
+.custom1 label:before {
+	width: 20px;
+	height: 20px;
+    border-radius: 0;
+    margin-left: -1.3rem;
+    top:1px;
+}
+
+.custom1 label:after {
+	width: 17px;
+	height: 17px;
+	padding-top: 0;
+	font-size: 12px;
+}
