@@ -11,10 +11,13 @@
 
 $container-height-base: 600px;
 $height-step: 100px;
-$font-ste: 1;
 
 html {
     font-size: 1rem;
+}
+
+.color-white {
+    color: $white;
 }
 
 .x2fS {
@@ -382,17 +385,66 @@ html {
     font-family: 'KelsonSansBold';
 }
 
-.custom1 label:before {
-	width: 20px;
-	height: 20px;
-    border-radius: 0;
-    margin-left: -1.3rem;
-    top:1px;
+// Checkboxes
+
+$bblue: #99C8F0;
+$bbrown: #4D371F;
+$bred: #E50000;
+$bantique: #FBF0C2;
+
+.custom1 label {
+
+    &::after {
+        width: 17px;
+        height: 17px;
+        padding-top: 0;
+        font-size: 12px;
+    }
+
+    &::before {
+        width: 20px;
+        height: 20px;
+        border-radius: 0;
+        margin-left: -1.3rem;
+        top:1px;
+    }
 }
 
-.custom1 label:after {
-	width: 17px;
-	height: 17px;
-	padding-top: 0;
-	font-size: 12px;
+.custom2 label {
+    padding-left: 20px;
+
+    &::before {
+        width: 33px;
+        height: 33px;
+        border-radius: 0;
+        top:-5px;
+    }
+
+    &::after {
+        width: 30px;
+        height: 30px;
+        top: -8px;
+        font-size: 25px;
+    }
 }
+
+@mixin checkbox-variant-custom($parent, $color, $color2: #fff) {
+    @include checkbox-variant-indeterminate($parent, $color, $color2);
+
+    #{$parent} label {
+        &::before {
+          background-color: $color;
+          border-color: $color;
+        }
+      }
+  }
+  
+@include checkbox-variant('.abc-checkbox-blue', $bblue);
+@include checkbox-variant('.abc-checkbox-brown', $bbrown);
+@include checkbox-variant('.abc-checkbox-red', $bred);
+@include checkbox-variant('.abc-checkbox-antique', $bantique, $black);
+
+@include checkbox-variant-custom('.abc-checkbox-blue', $bblue, $bblue);
+@include checkbox-variant-custom('.abc-checkbox-brown', $bbrown);
+@include checkbox-variant-custom('.abc-checkbox-red', $bred);
+@include checkbox-variant-custom('.abc-checkbox-antique', $bantique);

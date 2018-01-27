@@ -4,19 +4,19 @@
       <div class="col" formGroupName="forma">
         <h5 class="text-uppercase">Выберите форму кресла</h5>
         
-        <div class="form-check form-check-inline abc-checkbox abc-checkbox-primary custom1">
+        <div class="form-check form-check-inline abc-checkbox abc-checkbox-primary custom1 mb-2">
           <input class="form-check-input" id="oval" formControlName="oval" type="checkbox">
           <label class="form-check-label" for="oval">Овал</label>
         </div>
-        <div class="form-check form-check-inline abc-checkbox abc-checkbox-primary">
+        <div class="form-check form-check-inline abc-checkbox abc-checkbox-primary custom1 mb-2">
           <input class="form-check-input" id="shar" formControlName="shar" type="checkbox">
           <label class="form-check-label" for="shar">Шар</label>
         </div>
-        <div class="form-check form-check-inline abc-checkbox abc-checkbox-primary">
+        <div class="form-check form-check-inline abc-checkbox abc-checkbox-primary custom1 mb-2">
           <input class="form-check-input" id="kaplya" formControlName="kaplya" type="checkbox">
           <label class="form-check-label" for="kaplya">Капля</label>
         </div>
-        <div class="form-check form-check-inline abc-checkbox abc-checkbox-primary">
+        <div class="form-check form-check-inline abc-checkbox abc-checkbox-primary custom1 mb-2">
           <input class="form-check-input" id="bstoyki" formControlName="bstoyki" type="checkbox">
           <label class="form-check-label" for="bskoyki">Без стойки</label>
         </div>
@@ -27,20 +27,24 @@
     <div class="row">
       <div class="col pb-5" formGroupName="podushka">
         <h5 class="text-uppercase">Цвет подушки</h5>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input position-static" id="blue" type="checkbox" formControlName="blue" aria-label="">
-          <label></label>
+        <div class="form-check form-check-inline abc-checkbox abc-checkbox-blue custom2 my-2">
+          <input class="form-check-input" id="blue" type="checkbox" formControlName="blue">
+          <label class="form-check-label color-white" for="blue">.</label>
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input position-static" id="brown" type="checkbox" formControlName="brown" aria-label="">
+        <div class="form-check form-check-inline abc-checkbox abc-checkbox-brown custom2 my-2">
+          <input class="form-check-input" id="brown" type="checkbox" formControlName="brown">
+          <label class="form-check-label color-white" for="brown">.</label>
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input position-static" id="red" type="checkbox" formControlName="red" aria-label="">
+        <div class="form-check form-check-inline abc-checkbox abc-checkbox-red custom2 my-2">
+          <input class="form-check-input" id="red" type="checkbox" formControlName="red">
+          <label class="form-check-label color-white" for="red">.</label>
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input position-static" id="bezhev" type="checkbox" formControlName="bezhev" aria-label="">
+        <div class="form-check form-check-inline abc-checkbox abc-checkbox-antique custom2 my-2">
+          <input class="form-check-input" id="bezhev" type="checkbox" formControlName="bezhev">
+          <label class="form-check-label color-white" for="bezhev">.</label>
         </div>
-        <div class="form-check">
+        
+        <div class="form-check abc-checkbox abc-checkbox-primary custom1 my-2">
           <input class="form-check-input" id="other" type="checkbox" formControlName="other">
           <label class="form-check-label" for="other">Выбрать другой цвет</label>
         </div>
@@ -118,13 +122,13 @@
                   <label for="method">Способ подтверждения</label>
               </div>
               <div class="col-xs-12 col-sm-8">
-                  <div class="form-check form-check-inline">
+                  <div class="form-check form-check-inline abc-radio abc-radio-primary">
                       <input class="form-check-input" type="radio" name="method" id="sms" value="sms" formControlName="method" checked>
                       <label class="form-check-label" for="sms">
                         СМС Уведомление
                       </label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline abc-radio abc-radio-primary">
                       <input class="form-check-input" type="radio" name="method" id="call" value="call" formControlName="method">
                       <label class="form-check-label" for="call">
                         Звонок оператора
