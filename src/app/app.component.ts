@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import * as $ from 'jquery';
-//import { controlNameBinding } from '@angular/forms/src/directives/reactive_directives/form_control_name';
 
 @Component({
   selector: 'ngbd-modal-order',
@@ -17,6 +16,21 @@ import * as $ from 'jquery';
 })
 export class NgbdModalOrderComponent {
   @Input() public orderForm: FormGroup;
+  constructor(public activeModal: NgbActiveModal) {}
+}
+
+@Component({
+  selector: 'ngbd-modal-supply',
+  template: `<app-modal 
+              [id]="'supply'" 
+              [formGroup]="supplyForm" 
+              [title]="'Отправка заявки'" 
+              [button]="'Отправить'">
+              <app-supply-form [supplyForm]="supplyForm"></app-supply-form>
+            </app-modal>`
+})
+export class NgbdModalSupplyComponent {
+  @Input() public supplyForm: FormGroup;
   constructor(public activeModal: NgbActiveModal) {}
 }
 
@@ -53,6 +67,11 @@ export class AppComponent implements OnInit {
     method: ['sms', [ Validators.required]]
   });
 
+  supplyForm = this.fb.group({
+    name: ['', [Validators.required]],
+    phone: ['', [Validators.required]]
+  });
+
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
@@ -81,6 +100,20 @@ export class AppComponent implements OnInit {
       this.http.post('http://new.pletenev.ru/mail.php', JSON.stringify(res))
       .subscribe((r) => {
         console.log('Sent..');
+      });
+    },(reason) => {});
+  }
+
+  openSupplyForm() {
+    const modalRef = this.modalService
+      .open(NgbdModalSupplyComponent);
+
+    modalRef.componentInstance.supplyForm = this.supplyForm;
+    modalRef.result
+    .then((res) => {
+      this.http.post('http://new.pletenev.ru/supply.php', JSON.stringify(res))
+      .subscribe((r) => {
+        console.log('Sypply..');
       });
     },(reason) => {});
   }

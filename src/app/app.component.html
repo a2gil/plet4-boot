@@ -491,6 +491,9 @@
           <br>
           и наши специалисты свяжутся с вами
         </p>
+        <p>
+          <button class="btn btn-primary btn-lg font-ksr" (click)="openSupplyForm()">Оставить заявку</button>
+        </p>
       </div>
     </div>
   </div>
@@ -665,7 +668,46 @@
     </div>
   </div>
 </section>
-
+<section>
+  <div class="container-fluid">
+    <div class="row pt-5">
+      <div class="col text-center">
+        <h2>
+          <p class="text-uppercase font-ksb">
+            эти кресла уже обрели своих хозяев
+          </p>
+        </h2>
+      </div>
+    </div>
+    <div class="row no-paddings">
+      <div class="col">
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <img src="assets/section10/1.png" alt="">
+            <div class="carousel-caption">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="assets/section10/2.png" alt="Random second slide">
+            <div class="carousel-caption">
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="assets/section10/3.png" alt="Random third slide">
+            <div class="carousel-caption">
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="py-5 bg-dark">
   <div class="container">
     <div class="row">

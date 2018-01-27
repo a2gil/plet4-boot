@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent, NgbdModalOrderComponent } from './app.component';
+import { AppComponent, NgbdModalOrderComponent, NgbdModalSupplyComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { LoungeComponent } from './lounge/lounge.component';
 import { ITextComponent } from './i-text/i-text.component';
@@ -22,7 +22,8 @@ import { TextMaskModule } from 'angular2-text-mask';
     ModalComponent,
     SupplyFormComponent,
     OrderFormComponent,
-    NgbdModalOrderComponent
+    NgbdModalOrderComponent,
+    NgbdModalSupplyComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +34,6 @@ import { TextMaskModule } from 'angular2-text-mask';
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent],
-  entryComponents: [NgbdModalOrderComponent]
+  entryComponents: [NgbdModalOrderComponent, NgbdModalSupplyComponent]
 })
 export class AppModule { }
