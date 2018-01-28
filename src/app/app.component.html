@@ -123,7 +123,7 @@
       </div>
       <div class="col">
         <app-lounge 
-          [imgSrc]="'assets/section2/oval.jpg'" 
+          [imgSrc]="'assets/section2/oval_bez.png'" 
           [title]="'Подвесное кресло со стойкой'" 
           [type]="'овал'" 
           [corpus]="'металл'"
@@ -144,7 +144,7 @@
       </div>
       <div class="col">
         <app-lounge 
-          [imgSrc]="'assets/section2/kaplya.jpg'" 
+          [imgSrc]="'assets/section2/shar.jpg'" 
           [title]="'Подвесное кресло со стойкой'" 
           [type]="'шар'" 
           [corpus]="'металл'"
@@ -193,7 +193,7 @@
 </section>
 
 <section class="py-5 bg-image-full" style="background-image: url('assets/k5LxoP.jpg');">
-  <div class="container">
+  <div class="container ledge-container">
     <div class="row">
       <div class="col text-center pb-4">
         <h2>
@@ -327,6 +327,20 @@
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/27ejtPTTkIU?rel=0&amp;showinfo=0" frameborder="0"
             allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="row pt-4">
+          <div class="col">
+            <img src="assets/section2/compare1.png" alt="" class="img-fluid">
+          </div>
+          <div class="col">
+            <img src="assets/section2/compare2.png" alt="" class="img-fluid">
+          </div>
+          <div class="col">
+            <img src="assets/section2/compare3.png" alt="" class="img-fluid">
+          </div>
+          <div class="col">
+            <img src="assets/section2/compare4.png" alt="" class="img-fluid">
+          </div>
         </div>
         <div class="row py-5" id="our-advantages">
           <div class="col-4">
@@ -685,22 +699,18 @@
           <ng-template ngbSlide>
             <img src="assets/section10/1.png" alt="">
             <div class="carousel-caption">
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <!-- <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
             </div>
           </ng-template>
           <ng-template ngbSlide>
             <img src="assets/section10/2.png" alt="Random second slide">
             <div class="carousel-caption">
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </ng-template>
           <ng-template ngbSlide>
             <img src="assets/section10/3.png" alt="Random third slide">
             <div class="carousel-caption">
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
             </div>
           </ng-template>
         </ngb-carousel>

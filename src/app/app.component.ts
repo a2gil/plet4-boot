@@ -99,6 +99,7 @@ export class AppComponent implements OnInit {
     .then((res) => {
       this.http.post('http://new.pletenev.ru/mail.php', JSON.stringify(res))
       .subscribe((r) => {
+        window.location.href="http://pletenev.ru/spasibo.html";
         console.log('Sent..');
       });
     },(reason) => {});
