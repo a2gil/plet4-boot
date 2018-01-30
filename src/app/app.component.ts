@@ -48,6 +48,7 @@ export class AppComponent implements OnInit {
       shar: [false],
       kaplya: [false],
       bstoyki: [false],
+      double: [false],
     }),
     podushka: this.fb.group({
       blue: [false],

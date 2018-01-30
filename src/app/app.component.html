@@ -114,7 +114,7 @@
       <div class="col">
         <app-lounge 
           [imgSrc]="'assets/section2/kaplya.jpg'"
-          [title]="'Подвесное кресло со стойкой'" 
+          [title]="'Подвесное кресло со стойкой (Капля)'" 
           [type]="'капля'" 
           [corpus]="'металл'"
           [price]=16990
@@ -123,8 +123,8 @@
       </div>
       <div class="col">
         <app-lounge 
-          [imgSrc]="'assets/section2/oval_bez.png'" 
-          [title]="'Подвесное кресло со стойкой'" 
+          [imgSrc]="'assets/section2/oval_bez.jpg'" 
+          [title]="'Подвесное кресло со стойкой (Овал)'" 
           [type]="'овал'" 
           [corpus]="'металл'"
           [price]=16990
@@ -136,20 +136,29 @@
         <app-lounge 
           [imgSrc]="'assets/section2/kaplya_w.jpg'" 
           [title]="'Подвесное кресло без стойки'" 
-          [type]="'на выбор'" 
           [corpus]="'металл'"
-          [price]=16990
+          [price]=9990
           (onOrder)="openOrderForm('bstoyki')">
         </app-lounge>
       </div>
       <div class="col">
         <app-lounge 
           [imgSrc]="'assets/section2/shar.jpg'" 
-          [title]="'Подвесное кресло со стойкой'" 
+          [title]="'Подвесное кресло со стойкой (Шар)'"
           [type]="'шар'" 
           [corpus]="'металл'"
           [price]=16990
           (onOrder)="openOrderForm('shar')">
+        </app-lounge>
+      </div>
+      <div class="w-100"></div>
+      <div class="col d-flex justify-content-center">
+        <app-lounge 
+          [imgSrc]="'assets/section2/dvoynoe.jpg'" 
+          [title]="'Двойное кресло'" 
+          [corpus]="'металл'"
+          [price]=24990
+          (onOrder)="openOrderForm('double')">
         </app-lounge>
       </div>
     </div>
