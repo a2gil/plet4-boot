@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
+  @Output() public onCallHandler  = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit() {
   }
 
+  onCall() {
+    this.onCallHandler.emit();
+  }
 }

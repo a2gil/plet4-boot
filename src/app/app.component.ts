@@ -24,11 +24,12 @@ export class NgbdModalOrderComponent {
   template: `<app-modal 
               [id]="'supply'" 
               [formGroup]="supplyForm" 
-              [title]="'Отправка заявки'" 
-              [button]="'Отправить'">
+              [title]="title" 
+              [button]="button">
               <app-supply-form [supplyForm]="supplyForm"></app-supply-form>
             </app-modal>`
 })
+
 export class NgbdModalSupplyComponent {
   @Input() public supplyForm: FormGroup;
   constructor(public activeModal: NgbActiveModal) {}
@@ -70,7 +71,8 @@ export class AppComponent implements OnInit {
 
   supplyForm = this.fb.group({
     name: ['', [Validators.required]],
-    phone: ['', [Validators.required]]
+    phone: ['', [Validators.required]],
+    type: ['']
   });
 
   constructor(
@@ -106,17 +108,36 @@ export class AppComponent implements OnInit {
     },(reason) => {});
   }
 
-  openSupplyForm() {
+  openSupplyForm(data) {
     const modalRef = this.modalService
       .open(NgbdModalSupplyComponent);
 
+    this.supplyForm.get('type').setValue(data.type);
     modalRef.componentInstance.supplyForm = this.supplyForm;
+    modalRef.componentInstance.button = data.button;
+    modalRef.componentInstance.title = data.title;
     modalRef.result
     .then((res) => {
       this.http.post('http://new.pletenev.ru/supply.php', JSON.stringify(res))
       .subscribe((r) => {
-        console.log('Sypply..');
+        console.log('Supply..');
       });
     },(reason) => {});
+  }
+
+  openDilerForm() {
+    this.openSupplyForm({
+      title : 'Отправка заявки',
+      button: 'Отправить',
+      type: 'Дилер'
+    })
+  }
+
+  openCallForm() {
+    this.openSupplyForm({
+      title : 'Заказ звонка',
+      button: 'Заказать',
+      type: 'Заказ звонка'
+    })
   }
 }

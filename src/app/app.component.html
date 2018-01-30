@@ -1,4 +1,4 @@
-<app-nav></app-nav>
+<app-nav (onCallHandler)="openCallForm()"></app-nav>
 <header class="py-5 bg-image-full" style="background-image: url('assets/x2fS.jpg');">
   <div class="container">
     <div class="row x2fS">
@@ -134,15 +134,6 @@
       <div class="d-lg-none w-100"></div>
       <div class="col">
         <app-lounge 
-          [imgSrc]="'assets/section2/kaplya_w.jpg'" 
-          [title]="'Подвесное кресло без стойки'" 
-          [corpus]="'металл'"
-          [price]=9990
-          (onOrder)="openOrderForm('bstoyki')">
-        </app-lounge>
-      </div>
-      <div class="col">
-        <app-lounge 
           [imgSrc]="'assets/section2/shar.jpg'" 
           [title]="'Подвесное кресло со стойкой (Шар)'"
           [type]="'шар'" 
@@ -151,6 +142,15 @@
           (onOrder)="openOrderForm('shar')">
         </app-lounge>
       </div>
+      <div class="col">
+          <app-lounge 
+            [imgSrc]="'assets/section2/kaplya_w.jpg'" 
+            [title]="'Подвесное кресло без стойки'" 
+            [corpus]="'металл'"
+            [price]=9990
+            (onOrder)="openOrderForm('bstoyki')">
+          </app-lounge>
+        </div>
       <div class="w-100"></div>
       <div class="col d-flex justify-content-center">
         <app-lounge 
@@ -229,7 +229,7 @@
           <div class="available-color bg-antiqwhite"></div>
           <p>бежевый</p>
         </div>
-        <div class="color-block">
+        <div class="color-block color-block-brown">
           <div class="available-color bg-brown"></div>
           <p>коричневый</p>
         </div>
@@ -379,7 +379,7 @@
                 <img class="mr-3 s-pictogram" src="assets/section6/hq.png" alt="">
                 <div class="media-body align-self-center">
                   <h5 class="mt-0 text-uppercase font-ksb" style="font-size: 1rem">высокое качество продукции</h5>
-                  <span class="font-ht fs-1">Наши кресла выдерживают нагруку до 150 кг. Стойка делается из толстой стальной трубы диаметром 50мм, и толщиной стенки 4
+                  <span class="font-ht fs-1">Наши кресла выдерживают нагрузку до 150 кг. Стойка делается из толстой стальной трубы диаметром 50мм, и толщиной стенки 4
                   мм. Такое кресло прослужит Вам долгое время.</span>
                 </div>
               </li>
@@ -399,9 +399,9 @@
                 <img class="mr-3 s-pictogram" src="assets/section6/care.png" alt="">
                 <div class="media-body align-self-center">
                   <h5 class="mt-0 text-uppercase font-ksb" style="font-size: 1rem">забота о вашем комфорте</h5>
-                  <span class="font-ht fs-1">Материалы используемые при создании кресла долговечные и не проддаются пагубному воздействию внешней среды, в результате
+                  <span class="font-ht fs-1">Материалы используемые при создании кресла долговечные и не поддаются пагубному воздействию внешней среды, в результате
                   чего кресло можно использовать как в помещении, так и на улице. Позаботиться необходимо только о подушке.
-                  делается Вашего кофморта она сделана из прятной на ощупь ткани "Габардин", которая может промокнуть в дождливую
+                  делается для Вашего кофморта она сделана из прятной на ощупь ткани "Габардин", которая может промокнуть в дождливую
                   погоду. В этом случае полушку, необходимо занести в дом.</span>
                 </div>
               </li>
@@ -515,7 +515,7 @@
           и наши специалисты свяжутся с вами
         </p>
         <p>
-          <button class="btn btn-primary btn-lg font-ksr" (click)="openSupplyForm()">Оставить заявку</button>
+          <button class="btn btn-primary btn-lg font-ksr" (click)="openDilerForm()">Оставить заявку</button>
         </p>
       </div>
     </div>
@@ -713,12 +713,12 @@
             </div>
           </ng-template>
           <ng-template ngbSlide>
-            <img src="assets/section10/2.png" alt="Random second slide">
+            <img src="assets/section10/2.png" alt="">
             <div class="carousel-caption">
             </div>
           </ng-template>
           <ng-template ngbSlide>
-            <img src="assets/section10/3.png" alt="Random third slide">
+            <img src="assets/section10/3.png" alt="">
             <div class="carousel-caption">
             </div>
           </ng-template>
@@ -753,10 +753,10 @@
         </p>
         <p class="d-flex">
           <app-i-text [img]="'assets/footer/ic-vk.png'">
-            <span class="text-secondary">В контакте</span>
+            <a href="https://vk.com/pletenev">В контакте</a> 
           </app-i-text>
           <app-i-text [img]="'assets/footer/ic-ins.png'">
-            <span class="text-secondary">Instagram</span>
+            <a href="https://www.instagram.com/pletenev/">Instagram</a>
           </app-i-text>
         </p>
       </div>
