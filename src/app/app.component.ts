@@ -100,9 +100,9 @@ export class AppComponent implements OnInit {
     modalRef.componentInstance.orderForm = this.orderForm;
     modalRef.result
     .then((res) => {
-      this.http.post('http://new.pletenev.ru/mail.php', JSON.stringify(res))
+      this.http.post('http://pletenev.ru/mail.php', JSON.stringify(res))
       .subscribe((r) => {
-        window.location.href="http://pletenev.ru/spasibo.html";
+        window.location.href = 'http://pletenev.ru/spasibo.html';
         console.log('Sent..');
       });
     },(reason) => {});
@@ -118,7 +118,7 @@ export class AppComponent implements OnInit {
     modalRef.componentInstance.title = data.title;
     modalRef.result
     .then((res) => {
-      this.http.post('http://new.pletenev.ru/supply.php', JSON.stringify(res))
+      this.http.post('http://pletenev.ru/supply.php', JSON.stringify(res))
       .subscribe((r) => {
         console.log('Supply..');
       });
