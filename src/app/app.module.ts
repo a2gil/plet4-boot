@@ -12,6 +12,7 @@ import { OrderFormComponent } from './order-form/order-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TextMaskModule } from 'angular2-text-mask';
+import { AdvantageComponent } from './advantage/advantage.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TextMaskModule } from 'angular2-text-mask';
     SupplyFormComponent,
     OrderFormComponent,
     NgbdModalOrderComponent,
-    NgbdModalSupplyComponent
+    NgbdModalSupplyComponent,
+    AdvantageComponent
   ],
   imports: [
     BrowserModule,

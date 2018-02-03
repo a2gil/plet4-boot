@@ -259,11 +259,6 @@ html {
         text-align: center
     }
 
-    .adv {
-        border-bottom: 1px solid #7d0200;
-        margin: 0rem 2rem;
-    }
-
     .w-sm-25 {
         width: 25%;
     }
@@ -316,6 +311,13 @@ html {
 
     .h-md-75 {
         height: 75%;
+    }
+
+    //form mobile
+
+    .order-label {
+        font-size: 1.5rem;
+        padding-left: 15px !important;
     }
 }
 
@@ -408,6 +410,10 @@ $bantique: #FBF0C2;
         margin-left: -1.3rem;
         top:1px;
     }
+}
+
+.custom2 {
+    margin-bottom: 20px;
 }
 
 .custom2 label {
