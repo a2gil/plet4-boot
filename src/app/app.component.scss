@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 .available-color {
     width: 3rem;
     height: 3rem;
@@ -59,11 +61,11 @@
 }
 
 .bg-antiqwhite {
-    background: #F0DEBA;
+    background: $bantique;
 }
 
 .bg-brown {
-    background: #96440C;
+    background: $bbrown;
 }
 
 .sub-container {

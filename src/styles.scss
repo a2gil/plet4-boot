@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'theme/custom.scss';
+@import 'variables.scss';
 
 .navbar-nav {
     .nav-item:hover {
@@ -8,9 +9,6 @@
 }
 
 // for image responsive
-
-$container-height-base: 600px;
-$height-step: 100px;
 
 html {
     font-size: 1rem;
@@ -388,11 +386,6 @@ html {
 }
 
 // Checkboxes
-
-$bblue: #99C8F0;
-$bbrown: #4D371F;
-$bred: #E50000;
-$bantique: #FBF0C2;
 
 .custom1 label {
 
