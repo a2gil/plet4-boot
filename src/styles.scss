@@ -445,11 +445,14 @@ $bantique: #FBF0C2;
       }
   }
   
+@include checkbox-variant('.abc-checkbox-black', $black);
+@include checkbox-variant('.abc-checkbox-white', $white, $black);
 @include checkbox-variant('.abc-checkbox-blue', $bblue);
 @include checkbox-variant('.abc-checkbox-brown', $bbrown);
 @include checkbox-variant('.abc-checkbox-red', $bred);
 @include checkbox-variant('.abc-checkbox-antique', $bantique, $black);
 
+@include checkbox-variant-custom('.abc-checkbox-black', $black, $black);
 @include checkbox-variant-custom('.abc-checkbox-blue', $bblue, $bblue);
 @include checkbox-variant-custom('.abc-checkbox-brown', $bbrown);
 @include checkbox-variant-custom('.abc-checkbox-red', $bred);

@@ -58,6 +58,13 @@ export class AppComponent implements OnInit {
       bezhev: [false],
       other: [false]
     }),
+    kreslo: this.fb.group({
+      black: [false],
+      brown: [false],
+      white: [false],
+      bezhev: [false],
+      other: [false]
+    }),
     customer: this.fb.group({
       fio: ['', [ Validators.required]],
       email: ['', [ Validators.required, Validators.email]],

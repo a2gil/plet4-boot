@@ -58,6 +58,33 @@ function GetMessage($data) {
         $orderMessage .= 'Цвет подушки:' . $podushkam . '<br>';
     }
 
+    if (isset($data['kreslo'])) {
+        $kreslo = $data['kreslo'];
+        $kreslom = '';
+        if ($kreslo['black']) {
+            $kreslom .= 'Черный, ';
+        }
+
+        if ($kreslo['brown']) {
+            $kreslom .= 'Коричневый,';
+        }
+
+        if ($kreslo['white']) {
+            $kreslom .= 'Белый, ';
+        }
+
+        if ($kreslo['bezhev']) {
+            $kreslom .= 'Бежевый, ';
+        }
+
+        if ($kreslo['other']) {
+            $kreslom .= 'Другой цвет, ';
+        }
+
+        $orderMessage .= 'Цвет кресла:' . $kreslom . '<br>';
+    }
+
+
     if (isset($data['customer'])) {
         $customer = $data['customer'];
 

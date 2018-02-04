@@ -8,6 +8,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 export class NavComponent implements OnInit {
 
   @Output() public onCallHandler  = new EventEmitter<void>();
+  public collapsed: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -15,5 +17,9 @@ export class NavComponent implements OnInit {
 
   onCall() {
     this.onCallHandler.emit();
+  }
+
+  onCollapse() {
+    this.collapsed = !this.collapsed;
   }
 }
