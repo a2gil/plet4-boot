@@ -1,22 +1,22 @@
-<div class="row">
+<div class="row fs-xs-2 fs-md-0">
   <div class="col">
     <p class="font-ksr px-2 fs-2 text-center">Оставьте Ваш номер телефона и наш специалист свяжется с вами!</p>
   </div>
 </div>
 <div [formGroup]="supplyForm">
-  <div class="form-group row">
-    <label for="fio" class="col-2 col-form-label">Ваше имя</label>
-    <div class="col-10">
-      <input type="text" class="form-control" id="name" formControlName="name" placeholder="Иван">
+  <div class="form-group row fs-xs-2 fs-md-0">
+    <label for="fio" class="col-xs-4 col-lg-2 col-form-label">Ваше имя</label>
+    <div class="col-xs-8 col-lg-10">
+      <input type="text" class="form-control fs-xs-2 fs-md-0" id="name" formControlName="name" placeholder="Иван">
       <div class="invalid-feedback">
         Введите Ваше имя
       </div>
     </div>
   </div>
-  <div class="form-group row">
-    <label for="phone" class="col-2 col-form-label">Телефон</label>
-    <div class="col-10">
-      <input type="text" class="form-control" id="phone" [textMask]="{mask: mask}" formControlName="phone" placeholder="+7 (999) 000-00-00">
+  <div class="form-group row fs-xs-2 fs-md-0">
+    <label for="phone" class="col-xs-4 col-lg-2 col-form-label">Телефон</label>
+    <div class="col-xs-8 col-lg-10">
+      <input type="text" class="form-control fs-xs-2 fs-md-0" id="phone" [textMask]="{mask: mask}" formControlName="phone" placeholder="+7 (999) 000-00-00">
       <div class="invalid-feedback">
         Введите телефон
       </div>
