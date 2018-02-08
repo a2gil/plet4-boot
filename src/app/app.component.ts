@@ -24,7 +24,7 @@ export class NgbdModalOrderComponent {
   template: `<app-modal 
               [id]="'supply'" 
               [formGroup]="supplyForm" 
-              [title]="title" 
+              [title]="title"
               [button]="button">
               <app-supply-form [supplyForm]="supplyForm"></app-supply-form>
             </app-modal>`
@@ -32,6 +32,8 @@ export class NgbdModalOrderComponent {
 
 export class NgbdModalSupplyComponent {
   @Input() public supplyForm: FormGroup;
+  @Input() public title: string;
+  @Input() public button: string;
   constructor(public activeModal: NgbActiveModal) {}
 }
 
@@ -127,6 +129,7 @@ export class AppComponent implements OnInit {
     .then((res) => {
       this.http.post('http://pletenev.ru/supply.php', JSON.stringify(res))
       .subscribe((r) => {
+        window.location.href = 'http://pletenev.ru/spasibo.html';
         console.log('Supply..');
       });
     },(reason) => {});
@@ -137,7 +140,7 @@ export class AppComponent implements OnInit {
       title : 'Отправка заявки',
       button: 'Отправить',
       type: 'Дилер'
-    })
+    });
   }
 
   openCallForm() {

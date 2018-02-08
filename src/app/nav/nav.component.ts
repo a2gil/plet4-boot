@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -8,9 +8,12 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 export class NavComponent implements OnInit {
 
   @Output() public onCallHandler  = new EventEmitter<void>();
-  public collapsed: boolean = false;
+  public collapsed = false;
+  public isMobile: boolean;
 
-  constructor() { }
+  constructor() {
+    this.calculateIsMobile(window.screen.width);
+  }
 
   ngOnInit() {
   }
@@ -21,5 +24,18 @@ export class NavComponent implements OnInit {
 
   onCollapse() {
     this.collapsed = !this.collapsed;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.calculateIsMobile(event.target.innerWidth);
+  }
+
+  calculateIsMobile(width) {
+    if (width < 992) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false;
+    }
   }
 }

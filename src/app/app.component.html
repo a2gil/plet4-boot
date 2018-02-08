@@ -19,7 +19,7 @@
           </p>
         </h6>
         <p>
-          <button class="btn btn-primary br-2 py-3 px-5" (click)="openOrderForm()">
+          <button class="btn btn-primary br-2 py-3 px-5" (click)="openOrderForm(null)">
             <span class="font-ksr" style="font-size:1.5rem">Подобрать кресло</span>
           </button>
         </p>
@@ -170,7 +170,7 @@
       <div class="col d-flex justify-content-center">
         <app-lounge 
           [imgSrc]="'assets/section2/dvoynoe.jpg'" 
-          [title]="'Двойное кресло'" 
+          [title]="'Двухместное кресло'" 
           [corpus]="'металл'"
           [price]=24990
           (onOrder)="openOrderForm('double')">
@@ -710,7 +710,7 @@
     </div>
   </div>
 </section>
-<section>
+<section class="d-none d-sm-block">
   <div class="container-fluid">
     <div class="row pt-5">
       <div class="col text-center">
