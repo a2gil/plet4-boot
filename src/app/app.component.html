@@ -90,25 +90,25 @@
         <ul class="list-unstyled py-4">
           <li class="media">
             <img class="mr-3 pictogram" src="assets/section2/1.png" alt="">
-            <div class="media-body align-self-center font-ht fs-1">
+            <div class="media-body align-self-center font-ht fs-xs-2 fs-md-1">
               Наша компания производит подвесные кресла из искусственного ротанга.
             </div>
           </li>
           <li class="media my-4">
             <img class="mr-3 pictogram" src="assets/section2/2.png" alt="">
-            <div class="media-body align-self-center font-ht fs-1">
+            <div class="media-body align-self-center font-ht fs-xs-2 fs-md-1">
               Стойка делается из толстостенной трубы 50 мм. В отличие от китайских кресел, никогда не прогнется, даже под весом двух человек.
             </div>
           </li>
           <li class="media my-4">
             <img class="mr-3 pictogram" src="assets/section2/3.png" alt="">
-            <div class="media-body align-self-center font-ht fs-1">
+            <div class="media-body align-self-center font-ht fs-xs-2 fs-md-1">
               Мы самостоятельно производим мебель в России, поэтому являемся прямыми поставщиками кресел без диких наценок.
             </div>
           </li>
           <li class="media my-4">
             <img class="mr-3 pictogram" src="assets/section2/4.png" alt="">
-            <div class="media-body  align-self-center font-ht fs-1">
+            <div class="media-body  align-self-center font-ht fs-xs-2 fs-md-1">
               Каждое кресло делается вручную нашими мастерами и проходит тщательную проверку. На изделие предоставляется гарантия.
             </div>
           </li>
@@ -315,6 +315,7 @@
         <h2>
           <p class="text-uppercase font-ksb">общие габариты кресла</p>
         </h2>
+        <p class="font-ht fs-1"> Ниже представлены стандартные размеры кресла. Мы, являясь производителями, можем изготовить кресла индивидуального размера или даже по Вашему эскизу.  Позвоните нам прямо сейчас <strong>88007002920</strong> Звонок из России бесплатный!</p>
       </div>
     </div>
     <div class="row py-5">
@@ -325,7 +326,8 @@
       </div>
     </div>
     <div class="row py-5">
-      <div class="col">
+      <div class="col text-center">
+          <p class="font-ht fs-1">Видео о нашем производстве</p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mx8BCFnF4P0?rel=0&amp;showinfo=0" frameborder="0"
             allow="encrypted-media" allowfullscreen></iframe>
@@ -514,9 +516,9 @@
         </ul>
       </div>
     </div>
-    <div class="row py-5">
+    <div class="row py-lg-5">
       <div id="for-dilers" class="anchor"></div>
-      <div class="col-lg-6 offset-lg-6 col-xs-12 py-5 pl-5">
+      <div class="col-lg-6 offset-lg-6 col-xs-12 px-lg-5 pb-5 pl-5">
         <h1>
           <p class="text-uppercase font-ksb">дилерам</p>
         </h1>
@@ -749,10 +751,10 @@
 <footer class="py-5 bg-dark">
   <div class="container">
     <div class="row">
-      <div class="col-4 justify-content-end">
+      <div class="col-md-4 d-none d-md-block justify-content-end">
         <img class="w-50" src="assets/logo.png" alt="">
       </div>
-      <div class="col-4">
+      <div class="col-md-8 col-xs-12 fs-xs-2 fs-md-0">
         <p class="text-uppercase text-white font-ksb">плетеные и подвесные кресла
           <br> от производителя</p>
         <p>
@@ -761,7 +763,7 @@
               <br> (напротив тц на окружной)</span>
           </app-i-text>
         </p>
-        <p>
+        <p (click)="openCallForm()">
           <app-i-text [img]="'assets/common/phone_36.png'">
             <h5 class="mb-0">
               <span class="text-uppercase text-white font-ksb">
@@ -771,15 +773,18 @@
           </app-i-text>
         </p>
         <p class="d-flex">
-          <app-i-text [img]="'assets/footer/ic-vk.png'">
-            <a href="https://vk.com/pletenev">В контакте</a> 
-          </app-i-text>
-          <app-i-text [img]="'assets/footer/ic-ins.png'">
-            <a href="https://www.instagram.com/pletenev/">Instagram</a>
-          </app-i-text>
+          <a href="https://vk.com/pletenev">
+            <app-i-text [img]="'assets/footer/ic-vk.png'">
+              В контакте
+            </app-i-text>
+          </a> 
+          <a href="https://www.instagram.com/pletenev/">
+            <app-i-text [img]="'assets/footer/ic-ins.png'">
+              Instagram
+            </app-i-text>
+          </a>
         </p>
       </div>
-      <div class="col-4"></div>
       <!-- VK Widget -->
       <div id="vk_community_messages"></div>
       <div><img src="https://mc.yandex.ru/watch/46956414" style="position:absolute; left:-9999px;" alt="" /></div>
