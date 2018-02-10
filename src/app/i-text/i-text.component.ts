@@ -9,6 +9,7 @@ export class ITextComponent implements OnInit {
 
   @Input() public img: string = '';
   @Input() public width: number;
+  @Input() public visibility = true;
   
   constructor() { }
 

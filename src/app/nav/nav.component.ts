@@ -12,10 +12,11 @@ export class NavComponent implements OnInit {
   public isMobile: boolean;
 
   constructor() {
-    this.calculateIsMobile(window.screen.width);
+    
   }
 
   ngOnInit() {
+    this.calculateIsMobile(window.screen.width);
   }
 
   onCall() {
