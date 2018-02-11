@@ -15,6 +15,7 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { AdvantageComponent } from './advantage/advantage.component';
 import { SliderComponent } from './slider/slider.component';
 import { SliderItemComponent } from './slider-item/slider-item.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SliderItemComponent } from './slider-item/slider-item.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
     TextMaskModule,

@@ -19,7 +19,7 @@ export class SliderComponent implements AfterContentInit,OnDestroy  {
   constructor() { }
 
   ngAfterContentInit(): void {
-    let timer = Observable.timer(2000,3000);
+    let timer = Observable.timer(2000,5000);
 
     this.timerSubscribtion = timer.subscribe(t => {
        this.currentIndex = t % this.sliders.length;
