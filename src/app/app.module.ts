@@ -13,6 +13,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TextMaskModule } from 'angular2-text-mask';
 import { AdvantageComponent } from './advantage/advantage.component';
+import { SliderComponent } from './slider/slider.component';
+import { SliderItemComponent } from './slider-item/slider-item.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { AdvantageComponent } from './advantage/advantage.component';
     OrderFormComponent,
     NgbdModalOrderComponent,
     NgbdModalSupplyComponent,
-    AdvantageComponent
+    AdvantageComponent,
+    SliderComponent,
+    SliderItemComponent
   ],
   imports: [
     BrowserModule,

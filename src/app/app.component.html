@@ -33,42 +33,46 @@
   <div class="container">
     <div class="row">
       <div class="col text-center postition-relative">
-          <div class="d-lg-none position-absolute w-100 h-100" style="padding: 15px 15px 15px 0">
-            <div class="position-relative bevel-right h-100"></div>
-          </div>
+        <div class="d-lg-none position-absolute w-100 h-100" style="padding: 15px 15px 15px 0">
+          <div class="position-relative bevel-right h-100"></div>
+        </div>
         <img src="assets/own.png" alt="" class="img-fluid py-3">
         <h4>
-          <p class="text-white text-uppercase font-ksb">собственное<br>производство</p>
+          <p class="text-white text-uppercase font-ksb">собственное
+            <br>производство</p>
         </h4>
       </div>
-      <div class="col text-center">  
+      <div class="col text-center">
         <img src="assets/delivery.png" alt="" class="img-fluid py-3">
         <h4>
-          <p class="text-white text-uppercase font-ksb">доставки<br>по россии и снг</p>
+          <p class="text-white text-uppercase font-ksb">доставки
+            <br>по россии и снг</p>
         </h4>
       </div>
       <div class="d-lg-none w-100"></div>
       <div class="col text-center position-relative">
-          <div class="d-lg-none position-absolute w-100 h-100" style="padding: 15px 15px 15px 0">
-              <div class="position-relative bevel-right h-100"></div>
-            </div>
+        <div class="d-lg-none position-absolute w-100 h-100" style="padding: 15px 15px 15px 0">
+          <div class="position-relative bevel-right h-100"></div>
+        </div>
         <div class="d-lg-none position-relative">
           <div class="position-absolute w-100 bevel-top">
           </div>
         </div>
         <img src="assets/garante.png" alt="" class="img-fluid py-3">
         <h4>
-          <p class="text-white text-uppercase font-ksb">гарантия<br>лучшей цены</p>
+          <p class="text-white text-uppercase font-ksb">гарантия
+            <br>лучшей цены</p>
         </h4>
       </div>
       <div class="col text-center">
-          <div class="d-lg-none position-relative">
-            <div class="position-absolute w-100 bevel-top">
-              </div>
+        <div class="d-lg-none position-relative">
+          <div class="position-absolute w-100 bevel-top">
           </div>
+        </div>
         <img src="assets/design.png" alt="" class="img-fluid py-3">
         <h4>
-          <p class="text-white text-uppercase font-ksb">индивидуальный<br>дизайн</p>
+          <p class="text-white text-uppercase font-ksb">индивидуальный
+            <br>дизайн</p>
         </h4>
       </div>
     </div>
@@ -127,54 +131,29 @@
     </div>
     <div class="row py-5">
       <div class="col">
-        <app-lounge 
-          [imgSrc]="'assets/section2/kaplya.jpg'"
-          [title]="'Подвесное кресло со стойкой (Капля)'" 
-          [type]="'капля'" 
-          [corpus]="'металл'"
-          [price]=16990
-          (onOrder)="openOrderForm('kaplya')">
+        <app-lounge [imgSrc]="'assets/section2/kaplya.jpg'" [title]="'Подвесное кресло со стойкой (Капля)'" [type]="'капля'" [corpus]="'металл'"
+          [price]=16990 (onOrder)="openOrderForm('kaplya')">
         </app-lounge>
       </div>
       <div class="col">
-        <app-lounge 
-          [imgSrc]="'assets/section2/oval_bez.jpg'" 
-          [title]="'Подвесное кресло со стойкой (Овал)'" 
-          [type]="'овал'" 
-          [corpus]="'металл'"
-          [price]=16990
-          (onOrder)="openOrderForm('oval')">
+        <app-lounge [imgSrc]="'assets/section2/oval_bez.jpg'" [title]="'Подвесное кресло со стойкой (Овал)'" [type]="'овал'" [corpus]="'металл'"
+          [price]=16990 (onOrder)="openOrderForm('oval')">
         </app-lounge>
       </div>
       <div class="d-lg-none w-100"></div>
       <div class="col">
-        <app-lounge 
-          [imgSrc]="'assets/section2/shar.jpg'" 
-          [title]="'Подвесное кресло со стойкой (Шар)'"
-          [type]="'шар'" 
-          [corpus]="'металл'"
-          [price]=16990
-          (onOrder)="openOrderForm('shar')">
+        <app-lounge [imgSrc]="'assets/section2/shar.jpg'" [title]="'Подвесное кресло со стойкой (Шар)'" [type]="'шар'" [corpus]="'металл'"
+          [price]=16990 (onOrder)="openOrderForm('shar')">
         </app-lounge>
       </div>
       <div class="col">
-          <app-lounge 
-            [imgSrc]="'assets/section2/kaplya_w.jpg'" 
-            [title]="'Подвесное кресло без стойки (Капля)'" 
-            [type]="'капля'"            
-            [corpus]="'металл'"
-            [price]=9990
-            (onOrder)="openOrderForm('bstoyki')">
-          </app-lounge>
-        </div>
+        <app-lounge [imgSrc]="'assets/section2/kaplya_w.jpg'" [title]="'Подвесное кресло без стойки (Капля)'" [type]="'капля'" [corpus]="'металл'"
+          [price]=9990 (onOrder)="openOrderForm('bstoyki')">
+        </app-lounge>
+      </div>
       <div class="w-100"></div>
       <div class="col d-flex justify-content-center">
-        <app-lounge 
-          [imgSrc]="'assets/section2/dvoynoe.jpg'" 
-          [title]="'Двухместное кресло'" 
-          [corpus]="'металл'"
-          [price]=24990
-          (onOrder)="openOrderForm('double')">
+        <app-lounge [imgSrc]="'assets/section2/dvoynoe.jpg'" [title]="'Двухместное кресло'" [corpus]="'металл'" [price]=24990 (onOrder)="openOrderForm('double')">
         </app-lounge>
       </div>
     </div>
@@ -315,7 +294,9 @@
         <h2>
           <p class="text-uppercase font-ksb">общие габариты кресла</p>
         </h2>
-        <p class="font-ht fs-1"> Ниже представлены стандартные размеры кресла. Мы, являясь производителями, можем изготовить кресла индивидуального размера или даже по Вашему эскизу.  Позвоните нам прямо сейчас <strong>88007002920</strong> Звонок из России бесплатный!</p>
+        <p class="font-ht fs-1"> Ниже представлены стандартные размеры кресла. Мы, являясь производителями, можем изготовить кресла индивидуального
+          размера или даже по Вашему эскизу. Позвоните нам прямо сейчас
+          <strong>88007002920</strong> Звонок из России бесплатный!</p>
       </div>
     </div>
     <div class="row py-5">
@@ -327,7 +308,7 @@
     </div>
     <div class="row py-5">
       <div class="col text-center">
-          <p class="font-ht fs-1">Видео о нашем производстве</p>
+        <p class="font-ht fs-1">Видео о нашем производстве</p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mx8BCFnF4P0?rel=0&amp;showinfo=0" frameborder="0"
             allow="encrypted-media" allowfullscreen></iframe>
@@ -344,13 +325,14 @@
         <h2>
           <p class="text-uppercase font-ksb">сравнение с китаем</p>
         </h2>
-        
+
       </div>
     </div>
     <div class="row">
       <div class="col"></div>
       <div class="col-lg-9 col-sm-12">
-          <p class="text-center font-ht fs-1">Мы специально купили подвесное кресло у конкурентов, чтоб предостеречь Вас от преждевременых покупок. <br>Посмотрите видео и Вы поймёте почему экономия в 1000 рублей, не принесет Вам большой радости. </p>
+        <p class="text-center font-ht fs-1">Мы специально купили подвесное кресло у конкурентов, чтоб предостеречь Вас от преждевременых покупок.
+          <br>Посмотрите видео и Вы поймёте почему экономия в 1000 рублей, не принесет Вам большой радости. </p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/27ejtPTTkIU?rel=0&amp;showinfo=0" frameborder="0"
             allow="encrypted-media" allowfullscreen></iframe>
@@ -360,10 +342,63 @@
             <img src="assets/section2/compare1.png" alt="" class="img-fluid">
           </div>
           <div class="col">
-            <img src="assets/section2/compare2.png" alt="" class="img-fluid">
+            <!-- <img src="assets/section2/compare2.png" alt="" class="img-fluid"> -->
+            <div class="py-5 text-center">
+                <p class="font-ksb text-uppercase" style="font-size:1.2rem; height:50px">слева: другие <br>кресла
+                </p>
+                <div class="font-ht" style="font-size:1.2rem;">
+                  <app-slider>
+                    <app-slider-item>
+                      Тонкостенная труба загибается от 100 кг
+                    </app-slider-item>
+                    <app-slider-item>
+                        Срок службы два года
+                    </app-slider-item>
+                    <app-slider-item>
+                        Покраска обычной эмалью
+                    </app-slider-item>
+                    <app-slider-item>
+                        "Гаражная" сборка
+                    </app-slider-item>
+                    <app-slider-item>
+                        Плетение из множества коротких нитей, расплетается через месяц
+                    </app-slider-item>
+                    <app-slider-item>
+                        Маленькая подушка
+                    </app-slider-item>
+                  </app-slider>
+                </div>
+              </div>
           </div>
           <div class="col">
-            <img src="assets/section2/compare3.png" alt="" class="img-fluid">
+            <!-- <img src="assets/section2/compare3.png" alt="" class="img-fluid"> -->
+            <div class="py-5 text-center">
+              <p class="font-ksb text-uppercase" style="font-size:1.2rem;height:50px">справа: кресло
+                <span class="text-info">Pletenev</span>
+              </p>
+              <div class="font-ht" style="font-size:1.2rem;">
+                <app-slider>
+                  <app-slider-item>
+                    Труба со стенкой 3.5 мм выдерживает нагрузку до 200 кг
+                  </app-slider-item>
+                  <app-slider-item>
+                    Любые расцветки
+                  </app-slider-item>
+                  <app-slider-item>
+                    Авторское не расплетающееся плетение
+                  </app-slider-item>
+                  <app-slider-item>
+                    Регулируемые ножки, возможно сделать по индивидуальным размерам
+                  </app-slider-item>
+                  <app-slider-item>
+                    Полимерно-порошковая покраска защитит от коррози и царапин
+                  </app-slider-item>
+                  <app-slider-item>
+                    Большая подушка
+                  </app-slider-item>
+                </app-slider>
+              </div>
+            </div>
           </div>
           <div class="col">
             <img src="assets/section2/compare4.png" alt="" class="img-fluid">
@@ -398,16 +433,16 @@
                 <img class="mr-3 s-pictogram" src="assets/section6/hq.png" alt="">
                 <div class="media-body align-self-center">
                   <h5 class="mt-0 text-uppercase font-ksb" style="font-size: 1rem">высокое качество продукции</h5>
-                  <span class="font-ht fs-1">Наши кресла выдерживают нагрузку до 150 кг. Стойка делается из толстой стальной трубы диаметром 50мм, и толщиной стенки 4
-                  мм. Такое кресло прослужит Вам долгое время.</span>
+                  <span class="font-ht fs-1">Наши кресла выдерживают нагрузку до 150 кг. Стойка делается из толстой стальной трубы диаметром 50мм, и
+                    толщиной стенки 4 мм. Такое кресло прослужит Вам долгое время.</span>
                 </div>
               </li>
               <li class="media my-4">
                 <img class="mr-3 s-pictogram" src="assets/section6/best_price.png" alt="">
                 <div class="media-body align-self-center">
                   <h5 class="mt-0 text-uppercase font-ksb" style="font-size: 1rem">лучшие цены от производителя</h5>
-                  <span class="font-ht fs-1">Мы гарантируем лучшую цену на рынке, т.к. являемся производителями, что дает вам возможность закупать наши кресла напрямую
-                  без посредников</span>
+                  <span class="font-ht fs-1">Мы гарантируем лучшую цену на рынке, т.к. являемся производителями, что дает вам возможность закупать наши
+                    кресла напрямую без посредников</span>
                 </div>
               </li>
             </ul>
@@ -418,10 +453,10 @@
                 <img class="mr-3 s-pictogram" src="assets/section6/care.png" alt="">
                 <div class="media-body align-self-center">
                   <h5 class="mt-0 text-uppercase font-ksb" style="font-size: 1rem">забота о вашем комфорте</h5>
-                  <span class="font-ht fs-1">Материалы используемые при создании кресла долговечные и не поддаются пагубному воздействию внешней среды, в результате
-                  чего кресло можно использовать как в помещении, так и на улице. Позаботиться необходимо только о подушке.
-                  делается для Вашего кофморта она сделана из прятной на ощупь ткани "Габардин", которая может промокнуть в дождливую
-                  погоду. В этом случае полушку, необходимо занести в дом.</span>
+                  <span class="font-ht fs-1">Материалы используемые при создании кресла долговечные и не поддаются пагубному воздействию внешней среды,
+                    в результате чего кресло можно использовать как в помещении, так и на улице. Позаботиться необходимо
+                    только о подушке. делается для Вашего кофморта она сделана из прятной на ощупь ткани "Габардин", которая
+                    может промокнуть в дождливую погоду. В этом случае полушку, необходимо занести в дом.</span>
                 </div>
               </li>
             </ul>
@@ -485,9 +520,9 @@
   </div>
 </section>
 
-<section class="position-relative"> 
+<section class="position-relative">
   <div class="d-none d-lg-block bg-image-full w-100 h-100 position-absolute" style="background-image: url('assets/section8/background.jpg');"></div>
-  <div class="container">  
+  <div class="container">
     <div class="row pt-5">
       <div id="how-to-make-order" class="anchor"></div>
       <div class="col-lg-6 offset-lg-6 col-xs-12">
@@ -510,7 +545,7 @@
           <li class="media my-4">
             <img class="mr-3" src="assets/section8/3.png" alt="" style="color: #464646">
             <div class="media-body align-self-center font-hl fs-1">
-               Кресла из наличия отправляются в день заказа (при условии, что заказ сделан до 14.00)
+              Кресла из наличия отправляются в день заказа (при условии, что заказ сделан до 14.00)
             </div>
           </li>
         </ul>
@@ -524,15 +559,12 @@
         </h1>
         <p class="pr-5 font-ksl fs-1" style="color:#5f5f5f">
           Мы ищем дилеров в городах и регионах России.
-          <br>
-          Предоставляем скидки. Также у нас есть интересные
-          <br>
-          условия для дизайнеров.
+          <br> Предоставляем скидки. Также у нас есть интересные
+          <br> условия для дизайнеров.
         </p>
         <p class="text-uppercase font-ksb fs-1">
-        чтобы узнать подробности оставьте заявку
-          <br>
-          и наши специалисты свяжутся с вами
+          чтобы узнать подробности оставьте заявку
+          <br> и наши специалисты свяжутся с вами
         </p>
         <p>
           <button class="btn btn-primary btn-lg font-ksr" (click)="openDilerForm()">Оставить заявку</button>
@@ -548,49 +580,48 @@
         <img src="assets/section8/delivery2.png" alt="" class="img-fluid">
       </div>
       <div class="col-sm-5 py-5">
-          <h2>
-              <p class="pl-5 text-uppercase font-ksb">доставка</p>
-          </h2>
-          <ul class="list-unstyled py-4">
-              <li class="media">
-               <img class="mr-3" src="assets/section8/d1.png" alt="">
-                <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
-                    Отправляем транспортной компанией в регионы России. ПЭК, Деловые линии, КИТ, ЖелДорЭкспедиция
-                </div>
-              </li>
-              <li class="media my-4">
-                <img class="mr-3" src="assets/section8/d2.png" alt="">
-                <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
-                    Возможна доставка до подъезда или до терминала транспортной компании.
-                </div>
-              </li>
-              <li class="media my-4">
-                <img class="mr-3" src="assets/section8/d3.png" alt="">
-                <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
-                    Доставку оплачивает покупатель. Кресла хорошо штабелируются, и отправка 6 кресел, по стоимости примерно равна доставке двух кресел. 
-                </div>
-              </li>
-              <li class="media my-4">
-                  <img class="mr-3" src="assets/section8/d4.png" alt="">
-                  <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
-                      Объем кресла с разбирающимся коконом 0.8 куб. м.
-                      Объем разбирающегося кокона без стойки - 0.5. куб. м.
-                  </div>
-                </li>
-                <li class="media my-4">
-                    <img class="mr-3" src="assets/section8/d5.png" alt="">
-                    <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
-                        Вес полного комплекта 35 кг.                        
-                    </div>
-                </li>
-                <li class="media my-4">
-                    <img class="mr-3" src="assets/section8/d6.png" alt="">
-                    <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
-                        Примерная стоимость доставки разборного кресла до подъезда дома в Москве - 1800 рублей. 
-                        До терминала - 1200 рублей.
-                    </div>
-                </li>
-            </ul>
+        <h2>
+          <p class="pl-5 text-uppercase font-ksb">доставка</p>
+        </h2>
+        <ul class="list-unstyled py-4">
+          <li class="media">
+            <img class="mr-3" src="assets/section8/d1.png" alt="">
+            <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
+              Отправляем транспортной компанией в регионы России. ПЭК, Деловые линии, КИТ, ЖелДорЭкспедиция
+            </div>
+          </li>
+          <li class="media my-4">
+            <img class="mr-3" src="assets/section8/d2.png" alt="">
+            <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
+              Возможна доставка до подъезда или до терминала транспортной компании.
+            </div>
+          </li>
+          <li class="media my-4">
+            <img class="mr-3" src="assets/section8/d3.png" alt="">
+            <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
+              Доставку оплачивает покупатель. Кресла хорошо штабелируются, и отправка 6 кресел, по стоимости примерно равна доставке двух
+              кресел.
+            </div>
+          </li>
+          <li class="media my-4">
+            <img class="mr-3" src="assets/section8/d4.png" alt="">
+            <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
+              Объем кресла с разбирающимся коконом 0.8 куб. м. Объем разбирающегося кокона без стойки - 0.5. куб. м.
+            </div>
+          </li>
+          <li class="media my-4">
+            <img class="mr-3" src="assets/section8/d5.png" alt="">
+            <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
+              Вес полного комплекта 35 кг.
+            </div>
+          </li>
+          <li class="media my-4">
+            <img class="mr-3" src="assets/section8/d6.png" alt="">
+            <div class="media-body align-self-center font-hl fs-1" style="color: #464646">
+              Примерная стоимость доставки разборного кресла до подъезда дома в Москве - 1800 рублей. До терминала - 1200 рублей.
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -777,7 +808,7 @@
             <app-i-text [img]="'assets/footer/ic-vk.png'">
               В контакте
             </app-i-text>
-          </a> 
+          </a>
           <a href="https://www.instagram.com/pletenev/">
             <app-i-text [img]="'assets/footer/ic-ins.png'">
               Instagram
@@ -787,7 +818,9 @@
       </div>
       <!-- VK Widget -->
       <div id="vk_community_messages"></div>
-      <div><img src="https://mc.yandex.ru/watch/46956414" style="position:absolute; left:-9999px;" alt="" /></div>
+      <div>
+        <img src="https://mc.yandex.ru/watch/46956414" style="position:absolute; left:-9999px;" alt="" />
+      </div>
     </div>
   </div>
 </footer>
