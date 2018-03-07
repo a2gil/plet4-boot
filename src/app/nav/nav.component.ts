@@ -20,6 +20,7 @@ export class NavComponent implements OnInit {
   }
 
   onCall() {
+    console.log('click!');
     this.onCallHandler.emit();
   }
 
